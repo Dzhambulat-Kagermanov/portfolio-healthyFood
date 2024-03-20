@@ -1,0 +1,35 @@
+@media screen and (max-width: 1024px) {
+  .head-block__header {
+    column-gap: 40px;
+  }
+  .head-header__nav {
+    column-gap: 20px;
+  }
+}
+@media screen and (max-width: 800px) {
+  .head-header__btn.--burgerMenuBtn {
+    display: flex;
+  }
+  .head-header__nav {
+    display: none;
+  }
+}
+@media screen and (max-width: 700px) {
+  .head-block__header {
+    min-height: 70px;
+  }
+}
+@media screen and (max-width: 360px) {
+  .head-block__header {
+    column-gap: 30px;
+  }
+  .component-logo h2 {
+    font-size: 13px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .component-logo h2 {
+    letter-spacing: 1.5px;
+  }
+}

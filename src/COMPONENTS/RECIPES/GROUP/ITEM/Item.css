@@ -1,0 +1,81 @@
+.recipes-group__item {
+  position: relative;
+  width: 100%;
+  height: 240px;
+  background-color: var(--darkGrey);
+  padding: 30px;
+  cursor: pointer;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 0 15px 2px black;
+}
+.recipes-group__item:hover {
+  transform: scale(1.01);
+  transition: var(--tran1);
+}
+.recipes-group__item article {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  justify-content: space-between;
+  row-gap: 5px;
+  flex-flow: wrap column;
+}
+
+.recipes-group__item::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  opacity: 0.5;
+}
+.recipes-group__item.--item1 {
+  grid-area: 1 / 1 / 2 / 2;
+}
+.recipes-group__item.--item2 {
+  grid-area: 1 / 2 / 2 / 3;
+}
+.recipes-group__item.--item3 {
+  grid-area: 2 / 1 / 3 / 2;
+}
+.recipes-group__item.--item4 {
+  grid-area: 2 / 2 / 3 / 3;
+}
+.recipes-group__item.--item1::before {
+  background-image: url("./ASSETS/breakfastBackg.png");
+  opacity: 0.8;
+}
+.recipes-group__item.--item2::before {
+  background-image: url("./ASSETS/lunchBackg.png");
+}
+.recipes-group__item.--item3::before {
+  background-image: url("./ASSETS/dinnerBackg.png");
+}
+.recipes-group__item.--item4::before {
+  background-image: url("./ASSETS/sweetsBackg.png");
+}
+
+.recipes-group__item.slim1 {
+  grid-area: 1 / 2 / 2 / 3;
+}
+.recipes-group__item.slim2 {
+  grid-area: 2 / 2 / 3 / 3;
+}
+.recipes-group__item.slim3 {
+  grid-area: 3 / 2 / 4 / 3;
+}
+.recipes-group__item.--active {
+  grid-area: 1 / 1 / 4 / 2;
+  height: 100%;
+}
+
+.recipes-group__item.--active .recipes-group-item__btn {
+  display: flex;
+}

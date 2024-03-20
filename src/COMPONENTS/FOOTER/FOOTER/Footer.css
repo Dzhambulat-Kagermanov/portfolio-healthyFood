@@ -1,0 +1,5 @@
+.footer-block__wrapper.--footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

@@ -1,0 +1,8 @@
+.about-block {
+  background-color: var(--darkGrey);
+  padding: 105px 60px 90px 60px;
+  max-width: 1110px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}

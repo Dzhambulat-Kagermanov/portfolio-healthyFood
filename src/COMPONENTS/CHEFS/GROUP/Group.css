@@ -1,0 +1,8 @@
+.chefs-block__group {
+  max-width: 1110px;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 30px;
+  flex-flow: wrap;
+}

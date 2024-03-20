@@ -1,0 +1,17 @@
+.modal-block__btn.--close {
+  cursor: pointer;
+  min-width: 30px;
+  min-height: 30px;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  padding: 10px;
+}
+.modal-block__btn.--close img {
+  transition: var(--tran2);
+  width: 30px;
+  height: 30px;
+}
+.modal-block__btn.--close:hover img {
+  transform: scale(-1.1, 1.1);
+}

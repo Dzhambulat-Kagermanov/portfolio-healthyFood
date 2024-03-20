@@ -1,0 +1,14 @@
+@import url("../../COMPONENTS/UI/CSS/Text.css");
+
+@font-face {
+  font-family: HelveticaNeueR;
+  src: url("../../SHARE/FONTS/HelveticaNeueRoman.ttf");
+}
+@font-face {
+  font-family: HelveticaNeueB;
+  src: url("../../SHARE/FONTS/HelveticaNeueBold.ttf");
+}
+@font-face {
+  font-family: HelveticaNeueBL;
+  src: url("../../SHARE/FONTS/HelveticaNeueBlack.ttf");
+}

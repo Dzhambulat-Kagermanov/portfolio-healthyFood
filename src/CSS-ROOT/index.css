@@ -1,0 +1,5 @@
+/* IMPORT MAIN STYLES */
+@import url("./MAIN/reset.css");
+@import url("./MAIN/main.css");
+@import url("./MAIN/imports.css");
+@import url("./MAIN/adaptive.css");

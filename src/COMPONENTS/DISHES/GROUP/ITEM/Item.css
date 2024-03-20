@@ -1,0 +1,22 @@
+.dishes-group__item {
+  width: 350px;
+  border-radius: 6px;
+  overflow: hidden;
+  color: var(--whiteGrey);
+}
+.dishes-group-item__image {
+  position: relative;
+  width: 100%;
+  height: 260px;
+}
+.dishes-group-item__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.dish-group-item__content {
+  padding: 30px;
+  background-color: var(--darkGrey);
+  color: inherit;
+  min-height: 240px;
+}

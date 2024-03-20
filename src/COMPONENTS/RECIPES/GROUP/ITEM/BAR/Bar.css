@@ -1,0 +1,12 @@
+.recipes-group-item__bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+  flex-flow: wrap;
+}
+.recipes-group-item-bar__info {
+  display: flex;
+  align-items: center;
+  column-gap: 15px;
+}

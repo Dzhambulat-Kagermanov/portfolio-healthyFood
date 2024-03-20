@@ -1,0 +1,21 @@
+.head-block {
+  position: relative;
+  display: flex;
+  row-gap: 80px;
+  flex-flow: wrap column;
+}
+.head-block::after {
+  content: "";
+  width: 100%;
+  height: calc(100% + 500px);
+
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
+
+  background-image: url("./ASSETS/background.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}

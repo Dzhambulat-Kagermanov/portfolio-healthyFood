@@ -1,0 +1,24 @@
+.head-content__btn {
+  padding: 25px 58px;
+  border-radius: 45px;
+  background-color: var(--lightGreen);
+  margin: 0 0 70px 0;
+  border: 3px solid var(--lightGreen);
+  transition: var(--tran1);
+}
+.head-content__btn:hover {
+  transform: scale(1.05);
+  background-color: rgba(0, 255, 0, 0.07);
+  backdrop-filter: blur(3px);
+}
+.head-content__btn:hover h3 {
+  color: var(--lightGreen);
+}
+.head-content__btn h3 {
+  font-family: HelveticaNeueB;
+  font-weight: 700;
+  font-size: 20px;
+  letter-spacing: 4px;
+  color: #000;
+  transition: var(--tran1);
+}

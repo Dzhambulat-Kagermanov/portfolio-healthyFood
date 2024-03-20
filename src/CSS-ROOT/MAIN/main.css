@@ -1,0 +1,46 @@
+/* VARS */
+:root {
+  --lightGreen: #34c759;
+  --lightGrey: #737373;
+  --transparentGrey: #a4a8b2;
+  --whiteGrey: #d9d9d9;
+  --darkGrey: #252525;
+  --blackGrey: #1a1a1a;
+
+  --tran1: linear 0.1s;
+  --tran2: linear 0.2s;
+  --tran3: linear 0.3s;
+  --tran4: linear 0.4s;
+  --tran5: linear 0.5s;
+}
+body {
+  background-color: var(--blackGrey);
+}
+html::-webkit-scrollbar {
+  width: 10px;
+  background-color: var(--darkGrey);
+  border-radius: 5px;
+}
+html::-webkit-scrollbar-thumb {
+  background-color: var(--lightGrey);
+  border-radius: 5px;
+}
+.wrapper {
+  position: relative;
+  width: 100%;
+}
+.inner {
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+.--dev {
+  background-color: rgba(255, 192, 203, 0.7);
+}
+.--parentBlock {
+  margin: 0 0 150px 0;
+}
+.--groupBlock {
+  margin: 120px auto 0 auto;
+}

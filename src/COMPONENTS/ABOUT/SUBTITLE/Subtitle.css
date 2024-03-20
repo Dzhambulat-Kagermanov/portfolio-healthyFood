@@ -1,0 +1,7 @@
+.about-block__subtitle {
+  color: var(--whiteGrey);
+  line-height: 30px;
+  text-align: center;
+  max-width: 735px;
+  margin: 90px auto;
+}

@@ -1,0 +1,17 @@
+.component-logo {
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+}
+.component-logo img {
+  width: 25px;
+  height: 24px;
+  transform: translateY(-4px);
+}
+.component-logo h2 {
+  font-size: 18px;
+  font-weight: 900;
+  font-family: HelveticaNeueBL, "Sans-serif";
+  color: var(--lightGreen);
+  letter-spacing: 2.5px;
+}

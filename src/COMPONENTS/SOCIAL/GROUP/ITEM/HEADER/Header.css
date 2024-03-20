@@ -1,0 +1,9 @@
+.social-group-item__header {
+  width: 100%;
+  padding: 25px;
+  border-bottom: 2px solid #303030;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

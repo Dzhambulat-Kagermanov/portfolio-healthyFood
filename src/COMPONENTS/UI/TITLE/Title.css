@@ -1,0 +1,38 @@
+.component-title {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+.component-title h2 {
+  font-family: HelveticaNeueBL;
+  font-weight: 900;
+  font-size: 100px;
+  letter-spacing: 15px;
+  color: #303030;
+  z-index: -1;
+  text-transform: uppercase;
+
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.component-title h3 {
+  text-transform: capitalize;
+  font-family: HelveticaNeueR;
+  font-weight: 400;
+  font-size: 30px;
+  letter-spacing: 0.2em;
+  color: var(--whiteGrey);
+}
+
+.component-title h2::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -10px;
+  width: 60px;
+  height: 2px;
+  background-color: var(--lightGreen);
+}

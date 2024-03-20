@@ -1,0 +1,18 @@
+.component-info__item {
+  width: 245px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: wrap column;
+  color: var(--whiteGrey);
+}
+.component-info__item img {
+  width: 20px;
+  height: 20px;
+}
+.component-info__item h2 {
+  margin: 15px 0 5px 0;
+}
+.component-info__item h3 {
+  color: rgb(255, 255, 255, 0.5);
+}

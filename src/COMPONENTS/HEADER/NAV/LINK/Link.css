@@ -1,0 +1,10 @@
+.head-header-nav__link {
+  color: var(--whiteGrey);
+}
+.head-header-nav__link a {
+  padding: 10px;
+  transition: var(--tran1);
+}
+.head-header-nav__link:hover a {
+  color: var(--lightGreen);
+}

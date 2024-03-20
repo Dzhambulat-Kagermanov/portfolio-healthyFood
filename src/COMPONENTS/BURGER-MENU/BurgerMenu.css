@@ -1,0 +1,20 @@
+.burgerMenu-block {
+  transition: 0.2s ease-in-out;
+  padding: 30px 50px;
+  position: fixed;
+  right: -110%;
+  top: 0;
+  width: 90%;
+  height: 100vh;
+
+  background-color: rgba(0, 0, 0, 0.9);
+  box-shadow: -5px 0 10px 0px black;
+}
+.burgerMenu-block__btn {
+  position: absolute;
+  right: 30px;
+  top: 30px;
+}
+.burgerMenu-block.--active {
+  right: 0;
+}

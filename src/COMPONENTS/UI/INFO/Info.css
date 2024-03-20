@@ -1,0 +1,6 @@
+.component-info {
+  display: flex;
+  justify-content: center;
+  column-gap: 90px;
+  flex-flow: wrap;
+}

@@ -1,0 +1,12 @@
+.recipes-group-item__text {
+  display: flex;
+  align-items: center;
+
+  color: #fff;
+  line-height: 25px;
+  flex-grow: 1;
+}
+.recipes-group__item.--active .recipes-group-item__text h2 {
+  font-size: 26px;
+  line-height: 35px;
+}

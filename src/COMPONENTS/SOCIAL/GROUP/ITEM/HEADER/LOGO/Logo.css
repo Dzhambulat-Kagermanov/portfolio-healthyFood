@@ -1,0 +1,20 @@
+.social-group-item-header__logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 20px;
+  color: var(--whiteGrey);
+}
+.social-group-item-header-logo__image {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  border: 1px solid #303030;
+}
+.social-group-item-header__logo img {
+  width: 16px;
+  height: 16px;
+}

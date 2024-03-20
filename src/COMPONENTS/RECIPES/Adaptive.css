@@ -1,0 +1,100 @@
+@media screen and (max-width: 1660px) {
+}
+@media screen and (max-width: 1440px) {
+  .recipes-group-item__text h2 {
+    font-size: 15px;
+  }
+}
+@media screen and (max-width: 1280px) {
+  .recipes-group__item:not(.--active) .recipes-group-item__text {
+    align-items: flex-start;
+    max-height: 50px;
+    overflow: auto;
+  }
+  .recipes-group__item:not(.--active)
+    .recipes-group-item__text::-webkit-scrollbar {
+    width: 4px;
+    background-color: var(--darkGrey);
+    border-radius: 5px;
+  }
+  .recipes-group__item:not(.--active)
+    .recipes-group-item__text::-webkit-scrollbar-thumb {
+    background-color: var(--whiteGrey);
+    border-radius: 5px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .recipes-group-item__bar {
+    justify-content: center;
+    gap: 20px;
+  }
+  .recipes-group__item {
+    height: auto;
+  }
+  .recipes-block__group.--preActive .recipes-group__item:not(.--active) {
+    min-height: 150px;
+    height: auto;
+  }
+  .recipes-group__item article {
+    row-gap: 20px;
+  }
+}
+@media screen and (max-width: 800px) {
+  .recipes-group__item.--active .recipes-group-item__text h2 {
+    font-size: 23px;
+  }
+}
+@media screen and (max-width: 700px) {
+  .recipes-block__group {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+  }
+  .recipes-group__item:hover {
+    transition: none;
+  }
+  .recipes-group__item {
+    transition: var(--tran1);
+  }
+  .recipes-group__item.--item1 {
+    grid-area: 1 / 1 / 2 / 3;
+  }
+  .recipes-group__item.--item2 {
+    grid-area: 2 / 1 / 2 / 3;
+  }
+  .recipes-group__item.--item3 {
+    grid-area: 3 / 1 / 3 / 3;
+  }
+  .recipes-group__item.--item4 {
+    grid-area: 5 / 1 / 4 / 3;
+  }
+  .recipes-group__item.--active {
+    grid-area: span;
+    min-height: 450px;
+  }
+  .recipes-block .component-title h2 {
+    font-size: 70px;
+  }
+  .recipes-block .component-title h3 {
+    font-size: 22px;
+  }
+  .recipes-group__item:not(.--active) .recipes-group-item__text {
+    max-height: 100px;
+  }
+}
+@media screen and (max-width: 360px) {
+  .recipes-block .component-title h3 {
+    font-size: 18px;
+  }
+  .recipes-block .component-title h2 {
+    font-size: 60px;
+    letter-spacing: 5px;
+  }
+}
+@media screen and (max-width: 320px) {
+  .recipes-block .component-title h3 {
+    font-size: 16px;
+  }
+  .recipes-block .component-title h2 {
+    font-size: 55px;
+  }
+}

@@ -1,0 +1,20 @@
+.head-content__title {
+  max-width: 860px;
+}
+.head-content__title h1 {
+  font-family: HelveticaNeueR;
+  letter-spacing: 6px;
+  font-weight: 400;
+  font-size: 72px;
+  text-transform: capitalize;
+  text-align: center;
+  color: var(--whiteGrey);
+}
+.head-content__title strong {
+  font-family: HelveticaNeueB;
+  letter-spacing: inherit;
+  font-weight: 700;
+  font-size: inherit;
+  text-transform: inherit;
+  color: inherit;
+}

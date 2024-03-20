@@ -1,0 +1,17 @@
+.recipes-group-item__title {
+  padding: 10px 15px;
+  background-color: rgba(0, 0, 0, 0.7);
+  min-width: 85px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+}
+.recipes-group-item__title h2 {
+  font-family: HelveticaNeueBL;
+  font-weight: 900;
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #fff;
+}

@@ -1,0 +1,13 @@
+.burgerMenu-nav__link {
+  width: 100%;
+  color: white;
+  text-align: center;
+}
+.burgerMenu-nav__link a {
+  padding: 10px;
+  font-size: 25px;
+  transition: var(--tran1);
+}
+.burgerMenu-nav__link:hover a {
+  color: var(--lightGreen);
+}

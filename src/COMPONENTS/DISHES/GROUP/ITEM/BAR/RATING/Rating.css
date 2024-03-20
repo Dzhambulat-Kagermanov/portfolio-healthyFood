@@ -1,0 +1,22 @@
+.dishes-group-item__rating {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-flow: wrap;
+  max-width: 156px;
+  width: 100%;
+}
+.dishes-group-item__rating .--counter h2 {
+  font-family: HelveticaNeueBL;
+  font-weight: 900;
+  font-size: 12px;
+  color: var(--transparentGrey);
+}
+.dishes-group-item-rating__stars {
+  display: flex;
+  column-gap: 5px;
+}
+.dishes-group-item-rating__stars img {
+  width: 20px;
+  height: 20px;
+}

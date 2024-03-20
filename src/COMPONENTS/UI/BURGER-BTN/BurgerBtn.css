@@ -1,0 +1,31 @@
+.--burgerMenuBtn {
+  width: 38px;
+  height: 27px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-flow: wrap column;
+  cursor: pointer;
+}
+.--burgerMenuBtn span {
+  width: 33px;
+  height: 3px;
+  background-color: var(--lightGreen);
+  transform: translateX(-3px);
+  transition: var(--tran1);
+}
+
+.--burgerMenuBtn span:nth-child(2) {
+  transition: var(--tran1);
+  transform: translateX(3px);
+}
+.--burgerMenuBtn:hover span {
+  transform: translateX(3px);
+}
+.--burgerMenuBtn:active span {
+  background-color: #207e38;
+}
+.--burgerMenuBtn:hover span:nth-child(2) {
+  transform: translateX(-3px);
+}

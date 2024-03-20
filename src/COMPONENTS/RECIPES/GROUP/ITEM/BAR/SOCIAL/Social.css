@@ -1,0 +1,18 @@
+.recipes-group-item-bar__social {
+  display: flex;
+  align-items: center;
+  column-gap: 25px;
+}
+.recipes-group-item-bar-social__item {
+  display: flex;
+  align-items: center;
+  column-gap: 15px;
+}
+.recipes-group-item-bar-social__item img {
+}
+.recipes-group-item-bar-social__item h2 {
+  font-family: HelveticaNeueB;
+  font-weight: 700;
+  font-size: 12px;
+  color: var(--whiteGrey);
+}

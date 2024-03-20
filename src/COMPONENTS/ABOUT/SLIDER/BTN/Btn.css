@@ -1,0 +1,23 @@
+.about-slider__btn {
+  width: 60px;
+  height: 60px;
+
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 21;
+
+  border-radius: 50%;
+  border: 2px solid #303030;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.about-slider__btn.--prev {
+  left: 25px;
+}
+.about-slider__btn.--next {
+  right: 25px;
+  transform: scale(-1, 1) translateY(-50%);
+}

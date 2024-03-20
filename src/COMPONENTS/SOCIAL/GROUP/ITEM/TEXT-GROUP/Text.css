@@ -1,0 +1,27 @@
+.social-group-item__text {
+  padding: 25px;
+  display: flex;
+  row-gap: 10px;
+  flex-flow: wrap column;
+  justify-content: space-between;
+  color: var(--lightGreen);
+}
+.social-group-item__text h2 {
+  color: var(--whiteGrey);
+  max-height: 120px;
+  overflow: auto;
+  line-height: 30px;
+  padding: 0 8px 0 0;
+}
+.social-group-item__text h3 {
+  color: var(--transparentGrey);
+}
+.social-group-item__text h2::-webkit-scrollbar {
+  width: 5px;
+  background-color: var(--darkGrey);
+  border-radius: 5px;
+}
+.social-group-item__text h2::-webkit-scrollbar-thumb {
+  background-color: var(--lightGrey);
+  border-radius: 5px;
+}

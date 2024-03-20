@@ -1,0 +1,20 @@
+.dishes-group-item__share {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  right: 25px;
+  top: 25px;
+  background-color: rgba(0, 0, 0, 0.4);
+  transition: var(--tran1);
+  border-radius: 50%;
+}
+.dishes-group-item__share img {
+  width: 15px;
+  height: auto;
+}
+.dishes-group-item__share:hover {
+  background-color: rgba(0, 0, 0, 1);
+}

@@ -1,0 +1,21 @@
+.social-group-item-header__btn {
+  transition: var(--tran1);
+  width: 100px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #303030;
+  border-radius: 30px;
+}
+.social-group-item-header__btn h2 {
+  font-family: HelveticaNeueBL;
+  font-weight: 900;
+  font-size: 10px;
+  text-transform: uppercase;
+  color: var(--lightGrey);
+}
+.social-group-item-header__btn:hover {
+  transform: scale(1.1);
+  background-color: #303030;
+}

@@ -1,0 +1,115 @@
+@media screen and (max-width: 1440px) {
+  .social-group__item {
+    width: 320px;
+  }
+}
+@media screen and (max-width: 1280px) {
+  .social-group__item {
+    width: calc(100% / 3 - 20px);
+  }
+}
+@media screen and (max-width: 1024px) {
+  .social-group-item__header {
+    flex-wrap: wrap;
+    align-items: flex-start;
+    row-gap: 15px;
+  }
+  .social-group-item-header__logo {
+    width: 100%;
+    justify-content: flex-start;
+  }
+  .social-group-item-header__btn {
+    width: 100%;
+  }
+  .social-block__group {
+    gap: 20px;
+  }
+  .social-group__item {
+    width: calc(100% / 3 - 14px);
+    height: auto;
+    max-height: 400px;
+  }
+}
+@media screen and (max-width: 800px) {
+  .social-group-item__header {
+    flex-wrap: nowrap;
+  }
+  .social-group-item-header__logo {
+    width: auto;
+    column-gap: 10px;
+  }
+  .social-group-item-header__logo h2 {
+    font-size: 14px;
+  }
+  .social-group-item-header__btn {
+    width: 100px;
+  }
+  .social-group__item {
+    width: calc(100% / 2 - 10px);
+  }
+  .social-group__item:last-child {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 700px) {
+  .social-block .component-title h2 {
+    font-size: 90px;
+    letter-spacing: 10px;
+  }
+
+  .social-group-item__header {
+    flex-wrap: wrap;
+    align-items: flex-start;
+    row-gap: 10px;
+  }
+  .social-group-item-header__logo {
+    width: 100%;
+    justify-content: flex-start;
+  }
+  .social-group-item-header__btn {
+    width: 100%;
+  }
+  .social-group__item:last-child .social-group-item__header {
+    flex-wrap: nowrap;
+  }
+  .social-group__item:last-child .social-group-item-header__logo {
+    width: auto;
+    column-gap: 10px;
+  }
+  .social-group__item:last-child .social-group-item-header__logo h2 {
+    font-size: 14px;
+  }
+  .social-group__item:last-child .social-group-item-header__btn {
+    width: 130px;
+  }
+  .social-group-item__text h2 {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 360px) {
+  .social-block .component-title h2 {
+    font-size: 65px;
+    letter-spacing: 8px;
+  }
+  .social-group__item {
+    width: 100%;
+  }
+  .social-group__item .social-group-item__header {
+    flex-wrap: nowrap;
+  }
+  .social-group__item .social-group-item-header__logo {
+    width: auto;
+    column-gap: 10px;
+  }
+  .social-group__item .social-group-item-header__logo h2 {
+    font-size: 14px;
+  }
+  .social-group__item .social-group-item-header__btn {
+    width: 100px;
+  }
+  .social-group__item:last-child .social-group-item-header__btn {
+    width: 100px;
+  }
+}
+@media screen and (max-width: 320px) {
+}

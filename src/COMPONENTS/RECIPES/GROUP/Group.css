@@ -1,0 +1,10 @@
+.recipes-block__group {
+  max-width: 1110px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 30px;
+}
+.recipes-block__group.--preActive .recipes-group__item:not(.--active) {
+  height: 150px;
+}

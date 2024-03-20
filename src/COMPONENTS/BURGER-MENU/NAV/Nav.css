@@ -1,0 +1,24 @@
+.burgerMenu-block__nav {
+  margin: auto 0;
+  row-gap: 40px;
+  display: flex;
+  row-gap: 40px;
+  flex-flow: wrap column;
+  min-height: 200px;
+}
+.burgerMenu-block-nav__wrappper {
+  overflow: auto;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.burgerMenu-block-nav__wrappper::-webkit-scrollbar {
+  width: 3px;
+  background-color: rgba(0, 0, 0, 0.9);
+  border-radius: 5px;
+}
+.burgerMenu-block-nav__wrappper::-webkit-scrollbar-thumb {
+  background-color: var(--darkGrey);
+  border-radius: 5px;
+}

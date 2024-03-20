@@ -1,0 +1,18 @@
+.recipes-group-item__btn.--back {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.4);
+  transition: var(--tran1);
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+.recipes-group-item__btn.--back:hover {
+  background-color: rgba(0, 0, 0, 1);
+  transform: scale(1.1);
+}
+.recipes-group-item__btn.--back img {
+  width: 14px;
+  height: 14px;
+}

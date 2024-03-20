@@ -1,0 +1,37 @@
+.modal-form__btn.--submit {
+  width: 300px;
+  height: 55px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--lightGreen);
+  border: 2px solid var(--lightGreen);
+  transition: var(--tran1);
+  border-radius: 30px;
+}
+.modal-form__btn.--submit h2 {
+  transition: var(--tran1);
+  font-family: HelveticaNeueR;
+  font-weight: 400;
+  font-size: 25px;
+  color: black;
+  letter-spacing: 6px;
+}
+.modal-form__btn.--submit:hover {
+  background-color: transparent;
+}
+.modal-form__btn.--submit:hover h2 {
+  color: var(--lightGreen);
+}
+
+.modal-form__btn.--submit:disabled {
+  border-radius: 10px;
+  opacity: 0.5;
+  cursor: default;
+}
+.modal-form__btn.--submit:disabled:hover {
+  background-color: var(--lightGreen);
+}
+.modal-form__btn.--submit:disabled:hover h2 {
+  color: black;
+}

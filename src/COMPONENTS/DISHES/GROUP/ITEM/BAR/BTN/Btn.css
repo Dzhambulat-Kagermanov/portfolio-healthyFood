@@ -1,0 +1,28 @@
+.dishes-group-item__btn {
+  background-color: var(--lightGreen);
+  width: 100px;
+  height: 40px;
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid var(--lightGreen);
+  transition: var(--tran1);
+}
+.dishes-group-item__btn h4 {
+  font-family: HelveticaNeueBL;
+  font-weight: 900;
+  font-size: 10px;
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--darkGrey);
+  letter-spacing: 2px;
+  transition: var(--tran1);
+}
+.dishes-group-item__btn:hover {
+  background-color: transparent;
+  transform: scale(1.05);
+}
+.dishes-group-item__btn:hover h4 {
+  color: var(--lightGreen);
+}

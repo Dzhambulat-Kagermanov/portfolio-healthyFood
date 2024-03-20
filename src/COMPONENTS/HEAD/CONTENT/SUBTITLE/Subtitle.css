@@ -1,0 +1,8 @@
+.head-block__subtitle {
+  margin: 15px 0 40px 0;
+  max-width: 530px;
+  line-height: 25px;
+  text-align: center;
+  color: var(--secondary);
+  color: var(--whiteGrey);
+}

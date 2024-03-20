@@ -1,0 +1,17 @@
+.dishes-group-item__title {
+  font-family: HelveticaNeueR;
+  font-weight: 400;
+  color: inherit;
+}
+.dishes-group-item__title h2 {
+  font-family: inherit;
+  font-weight: inherit;
+  font-size: 32px;
+  color: inherit;
+}
+.dishes-group-item__title h4 {
+  font-family: inherit;
+  font-weight: inherit;
+  font-size: 12px;
+  color: var(--transparentGrey);
+}
