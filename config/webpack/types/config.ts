@@ -3,6 +3,7 @@ export interface IWebpackPaths {
   src: string
   output: string
   entry: string
+  public?: string
 }
 export type TWebpackMode = 'development' | 'production'
 

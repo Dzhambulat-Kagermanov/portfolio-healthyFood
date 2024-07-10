@@ -1,0 +1,29 @@
+:root {
+  --green: #34c759;
+  --green-hover: #2ca54a;
+  --black: #1a1a1a;
+  --grey: #303030;
+  --grey-dark: #252525;
+  --grey-accent: #4d4d4d;
+  --grey-light: #737373;
+  --grey-light-accent: #d9d9d9;
+}
+
+.__text- {
+}
+.--dev {
+  background-color: rgba(255, 192, 203, 0.8);
+}
+
+body {
+  background-color: var(--black);
+}
+html::-webkit-scrollbar {
+  width: 5px;
+  background-color: var(--grey-accent);
+  border-radius: 5px;
+}
+html::-webkit-scrollbar-thumb {
+  background-color: var(--green);
+  border-radius: 5px;
+}
