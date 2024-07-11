@@ -4,7 +4,7 @@ import Base from 'shared/ui/Base/Base'
 import { classNames } from 'shared/lib/classNames/classNames'
 import classes from './Header.module.scss'
 import Logo from 'components/widgets/Logo/Logo'
-import MenuButton from 'shared/ui/MenuButton/MenuButton'
+import BurgerButton from 'shared/ui/BurgerButton/BurgerButton'
 
 interface IHeaderProps extends IClassName {}
 
@@ -13,7 +13,7 @@ const Header: FC<IHeaderProps> = ({ className }) => {
     <header className={classNames(classes.headerWrapper)}>
       <Base containerClass={classNames(classes.container)} innerClass={classNames(classes.header, {}, [className])}>
         <Logo />
-        <MenuButton />
+        <BurgerButton />
       </Base>
     </header>
   )

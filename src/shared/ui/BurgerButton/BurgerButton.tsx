@@ -5,14 +5,14 @@ import classes from './MenuButton.module.scss'
 
 interface IMenuButtonProps extends ButtonHTMLAttributes<HTMLButtonElement>, IClassName {}
 
-const MenuButton: FC<IMenuButtonProps> = ({ onClick, className }) => {
-  return (
-    <button className={classNames(classes.btn, {}, [className])}>
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
-  )
+const BurgerButton: FC<IMenuButtonProps> = ({ onClick, className }) => {
+    return (
+        <button className={classNames(classes.btn, {}, [className])}>
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    )
 }
 
-export default MenuButton
+export default BurgerButton
