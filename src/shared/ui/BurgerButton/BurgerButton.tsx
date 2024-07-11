@@ -7,7 +7,7 @@ interface IBurgerButtonProps extends ButtonHTMLAttributes<HTMLButtonElement>, IC
 
 const BurgerButton: FC<IBurgerButtonProps> = ({ onClick, className }) => {
   return (
-    <button className={classNames(classes.btn, {}, [className])}>
+    <button onClick={onClick} className={classNames(classes.btn, {}, [className])}>
       <span></span>
       <span></span>
       <span></span>

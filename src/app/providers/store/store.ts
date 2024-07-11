@@ -1,8 +1,9 @@
 import { configureStore } from '@reduxjs/toolkit'
 import modalSlice from './modal/modalSlice'
+import burgerMenuSlice from './burgerMenu/burgerMenuSlice'
 
 const store = configureStore({
-  reducer: { modal: modalSlice }
+  reducer: { modal: modalSlice, burgerMenu: burgerMenuSlice }
 })
 
 export default store

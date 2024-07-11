@@ -4,6 +4,6 @@ export const classNames = (main: string, mods: Record<string, boolean> = {}, add
     ...Object.entries(mods)
       .filter(([key, val]) => Boolean(val))
       .map(([key, val]) => key),
-    ...additional
+    ...additional.filter(Boolean)
   ].join(' ')
 }

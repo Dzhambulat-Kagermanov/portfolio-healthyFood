@@ -1,0 +1,9 @@
+.link {
+  font-size: 16px;
+  font-family: HelveticaB;
+  color: white;
+  transition: 0.1s color ease;
+  &:hover {
+    color: var(--green);
+  }
+}
