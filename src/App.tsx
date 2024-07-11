@@ -4,6 +4,7 @@ import Header from 'components/modules/Header/Header'
 import BurgerMenu from 'components/modules/BurgerMenu/BurgerMenu'
 import Head from 'components/modules/Head/Head'
 import About from 'components/modules/About/About'
+import Work from 'components/modules/Work/Work'
 
 const App: FC = () => {
   return (
@@ -12,6 +13,7 @@ const App: FC = () => {
       <BurgerMenu />
       <Head />
       <About />
+      <Work />
     </div>
   )
 }
