@@ -5,7 +5,6 @@ import classes from './Link.module.scss'
 
 interface ILinkProps extends IClassName, LinkHTMLAttributes<HTMLAnchorElement> {
   href?: string
-  children: ReactNode
 }
 
 const Link: FC<ILinkProps> = ({ className, href, children, onClick }) => {

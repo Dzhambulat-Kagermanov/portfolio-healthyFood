@@ -3,7 +3,7 @@
   position: fixed;
   top: 0;
   right: -100%;
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(20px);
   z-index: 6;
   height: 100%;
   overflow: auto;
@@ -34,6 +34,7 @@
 .btn {
   position: sticky;
   top: 30px;
+  right: 20px;
   align-self: flex-end;
 }
 .links {

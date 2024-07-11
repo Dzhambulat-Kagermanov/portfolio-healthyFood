@@ -27,7 +27,12 @@
   }
   &:active {
     span {
+      transition: 0.2s ease-in;
       background-color: var(--green-hover);
+      transform: translateX(-3px);
+      &:nth-child(2) {
+        transform: translateX(3px);
+      }
     }
   }
 }

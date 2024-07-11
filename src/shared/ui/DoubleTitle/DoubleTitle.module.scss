@@ -1,0 +1,45 @@
+.title {
+  position: relative;
+  text-align: center;
+}
+.mainTitle {
+  font-size: 20px;
+  font-family: HelveticaR;
+  color: var(--white);
+  z-index: 3;
+  position: relative;
+}
+
+.backTitle {
+  letter-spacing: 5px;
+  color: var(--grey);
+  font-family: HelveticaBl;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  z-index: 2;
+  text-transform: uppercase;
+  &::after {
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 2px;
+    background-color: var(--green);
+    bottom: -10px;
+    left: 50%;
+    translate: -50% 0;
+  }
+}
+.backTitle-huge {
+  font-size: 80px;
+}
+.backTitle-big {
+  font-size: 70px;
+}
+.backTitle-medium {
+  font-size: 60px;
+}
+.backTitle-small {
+  font-size: 55px;
+}

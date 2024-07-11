@@ -1,6 +1,13 @@
+.inner {
+  margin: 0 auto;
+  padding: 0 20px;
+}
 @media screen and (min-width: 0) {
   .inner {
     max-width: 300px;
+  }
+  .parentBlock {
+    margin: 0 0 100px 0;
   }
 }
 @media screen and (min-width: 361px) {
@@ -27,8 +34,8 @@
   .inner {
     max-width: 600px;
   }
-  .--parentBlock {
-    margin: 0 0 100px 0;
+  .parentBlock {
+    margin: 0 0 150px 0;
   }
 }
 @media screen and (min-width: 901px) {

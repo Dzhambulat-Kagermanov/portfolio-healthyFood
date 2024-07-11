@@ -2,17 +2,17 @@ import { FC } from 'react'
 import 'app/styles/index.scss'
 import Header from 'components/modules/Header/Header'
 import BurgerMenu from 'components/modules/BurgerMenu/BurgerMenu'
-import { Provider } from 'react-redux'
-import store from 'app/providers/store/store'
+import Head from 'components/modules/Head/Head'
+import About from 'components/modules/About/About'
 
 const App: FC = () => {
   return (
-    <Provider store={store}>
-      <div className='App'>
-        <Header />
-        <BurgerMenu />
-      </div>
-    </Provider>
+    <div className='App'>
+      <Header />
+      <BurgerMenu />
+      <Head />
+      <About />
+    </div>
   )
 }
 
