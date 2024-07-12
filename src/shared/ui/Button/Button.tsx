@@ -5,7 +5,7 @@ import { classNames } from 'shared/lib/classNames/classNames'
 
 interface IButtonProps extends ButtonHTMLAttributes<HTMLButtonElement>, IClassName {
   size?: 'big' | 'medium'
-  theme?: 'fill' | 'outlined'
+  theme?: 'fill' | 'outlined' | 'clear'
   circle?: boolean
 }
 const Button: FC<IButtonProps> = ({ className, onClick, children, size, theme, circle, style }) => {

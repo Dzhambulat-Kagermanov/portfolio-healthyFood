@@ -1,0 +1,27 @@
+.dishes {
+}
+.group {
+  display: flex;
+  flex-flow: wrap column;
+  row-gap: 30px;
+  margin: 80px 0 0 0;
+}
+.moreBtn {
+  margin: 20px 0 0 0;
+  width: 100%;
+  text-align: center;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  text-decoration-color: var(--white);
+  color: var(--white);
+  font-family: HelveticaR;
+  font-size: 18px;
+  &:hover {
+    scale: 1.1;
+    color: var(--green);
+    text-decoration-color: var(--green);
+  }
+}
+.loader {
+  margin: 60px auto 40px auto;
+}

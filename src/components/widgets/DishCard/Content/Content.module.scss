@@ -1,0 +1,20 @@
+.content {
+  font-family: HelveticaR;
+  h2 {
+    color: var(--white);
+    font-size: 32px;
+    font-family: inherit;
+  }
+  h4 {
+    color: var(--grey-light-transparent);
+    font-size: 12px;
+    font-family: inherit;
+  }
+  h3 {
+    line-height: 20px;
+    color: var(--grey-light-transparent);
+    font-size: 13px;
+    font-family: inherit;
+    margin: 20px 0;
+  }
+}

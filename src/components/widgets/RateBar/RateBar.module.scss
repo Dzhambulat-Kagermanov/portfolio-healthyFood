@@ -1,0 +1,21 @@
+.rating {
+  display: flex;
+  column-gap: 10px;
+  align-items: center;
+}
+.group {
+  display: flex;
+  column-gap: 5px;
+}
+.item {
+  img {
+    width: 20px;
+    height: 19px;
+  }
+}
+.ratingNumber {
+  translate: 0 2px;
+  font-family: HelveticaBl;
+  font-size: 13px;
+  color: var(--white);
+}

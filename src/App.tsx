@@ -5,6 +5,7 @@ import BurgerMenu from 'components/modules/BurgerMenu/BurgerMenu'
 import Head from 'components/modules/Head/Head'
 import About from 'components/modules/About/About'
 import Work from 'components/modules/Work/Work'
+import Dishes from 'components/modules/Dishes/Dishes'
 
 const App: FC = () => {
   return (
@@ -14,6 +15,7 @@ const App: FC = () => {
       <Head />
       <About />
       <Work />
+      <Dishes />
     </div>
   )
 }
