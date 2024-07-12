@@ -8,18 +8,22 @@ import DishCard from 'components/widgets/DishCard/DishCard'
 import { dishesData } from 'shared/constants/dishes'
 import Button from 'shared/ui/Button/Button'
 import Loader from 'shared/ui/Loader/Loader'
-import { getDataTimeout } from 'shared/lib/getDataTimeout/getDataTimeout'
-import { getDataPagination } from 'shared/lib/getDataPagination/getDataPagination'
+import { setDataPagination, setDataPaginationOnClick } from 'shared/lib/setDataPagination/setDataPagination'
 
 interface IDishesProps extends IClassName {}
 const Dishes: FC<IDishesProps> = ({ className }) => {
-  const paginationStep: number = 3
-  let [paginationPosition, setPaginationPosition] = useState<number>(0)
-  const [isLoading, setIsLoading] = useState<boolean>(false)
-  const [loadingData, setLoadingData] = useState<typeof dishesData>(getDataPagination(dishesData, 0, paginationStep))
-  const [isLoadData, setIsLoadData] = useState<boolean>(true)
-
-  console.log(loadingData.length)
+  const dishesPaginationStep: number = 3
+  const {
+    paginationStep,
+    paginationPosition,
+    setPaginationPosition,
+    isLoading,
+    setIsLoading,
+    loadingData,
+    setLoadingData,
+    isLoadData,
+    setIsLoadData
+  } = setDataPagination(dishesData, dishesPaginationStep)
 
   return (
     <Base innerClass={classNames(classes.dishes, {}, [className])}>
@@ -44,20 +48,18 @@ const Dishes: FC<IDishesProps> = ({ className }) => {
         <Button
           theme='clear'
           className={classNames(classes.moreBtn)}
-          onClick={async () => {
-            setIsLoading(true)
-            const nextStepData: any = await getDataTimeout(
-              getDataPagination(dishesData, paginationPosition + paginationStep, paginationStep)
-            )
-            nextStepData.length || setIsLoadData(false)
-
-            setPaginationPosition((current) => {
-              return current + paginationStep
+          onClick={() => {
+            setDataPaginationOnClick(dishesData, {
+              paginationStep,
+              paginationPosition,
+              setPaginationPosition,
+              isLoading,
+              setIsLoading,
+              loadingData,
+              setLoadingData,
+              isLoadData,
+              setIsLoadData
             })
-            setLoadingData((current) => {
-              return [...current, ...nextStepData]
-            })
-            setIsLoading(false)
           }}
         >
           More dishes
