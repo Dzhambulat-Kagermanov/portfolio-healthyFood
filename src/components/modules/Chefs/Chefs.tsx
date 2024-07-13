@@ -10,24 +10,26 @@ import DoubleTitle from 'shared/ui/DoubleTitle/DoubleTitle'
 interface IChefsProps extends IClassName {}
 const Chefs: FC<IChefsProps> = ({ className }) => {
   return (
-    <Base innerClass={classNames(classes.chefs, {}, [className])}>
-      <DoubleTitle backTitleSize='big' backTitle='Chefs' className={classNames(classes.title)}>
-        This month's chefs
-      </DoubleTitle>
-      <ul className={classNames(classes.group)}>
-        {chefsData.map(({ avatar, id, name, portfolio, speciality }) => (
-          <ChefsCard
-            key={id}
-            avatar={avatar}
-            name={name}
-            portfolio={portfolio}
-            speciality={speciality}
-            className={classNames(classes.item)}
-            tag='li'
-          />
-        ))}
-      </ul>
-    </Base>
+    <section>
+      <Base innerClass={classNames(classes.chefs, {}, [className])}>
+        <DoubleTitle backTitleSize='big' backTitle='Chefs' className={classNames(classes.title)}>
+          This month's chefs
+        </DoubleTitle>
+        <ul className={classNames(classes.group)}>
+          {chefsData.map(({ avatar, id, name, portfolio, speciality }) => (
+            <ChefsCard
+              key={id}
+              avatar={avatar}
+              name={name}
+              portfolio={portfolio}
+              speciality={speciality}
+              className={classNames(classes.item)}
+              tag='li'
+            />
+          ))}
+        </ul>
+      </Base>
+    </section>
   )
 }
 

@@ -17,15 +17,17 @@ const App: FC = () => {
     <div className='App'>
       <Header />
       <BurgerMenu />
-      <Head />
-      <About />
-      <Work />
-      <Dishes />
-      <Chefs />
-      <Recipes />
-      <Social />
-      <FooterInfo />
-      <Footer />
+      <main>
+        <Head />
+        <About />
+        <Work />
+        <Dishes />
+        <Chefs />
+        <Recipes />
+        <Social />
+        <FooterInfo />
+        <Footer />
+      </main>
     </div>
   )
 }

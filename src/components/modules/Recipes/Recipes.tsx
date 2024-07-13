@@ -12,30 +12,32 @@ const Recipes: FC<IRecipesProps> = ({ className }) => {
   const [activeId, setActivaId] = useState<number>(0)
 
   return (
-    <Base innerClass={classNames(classes.recipes, {}, [className])}>
-      <DoubleTitle backTitle='Recipes' className={classNames(classes.title)} backTitleSize='small'>
-        Recipes From Our Chefs
-      </DoubleTitle>
-      <ul className={classNames(classes.group)}>
-        {recipesData.map(({ author, date, description, id, recipesGroup, socialData }, index) => (
-          <RecipesCard
-            key={id}
-            author={author}
-            date={date}
-            description={description}
-            recipesGroup={recipesGroup}
-            socialData={{
-              comments: socialData.comments,
-              views: socialData.views
-            }}
-            setActiveId={setActivaId}
-            id={id}
-            className={classNames(classes.item)}
-            isActive={activeId === id}
-          />
-        ))}
-      </ul>
-    </Base>
+    <section>
+      <Base innerClass={classNames(classes.recipes, {}, [className])}>
+        <DoubleTitle backTitle='Recipes' className={classNames(classes.title)} backTitleSize='small'>
+          Recipes From Our Chefs
+        </DoubleTitle>
+        <ul className={classNames(classes.group)}>
+          {recipesData.map(({ author, date, description, id, recipesGroup, socialData }, index) => (
+            <RecipesCard
+              key={id}
+              author={author}
+              date={date}
+              description={description}
+              recipesGroup={recipesGroup}
+              socialData={{
+                comments: socialData.comments,
+                views: socialData.views
+              }}
+              setActiveId={setActivaId}
+              id={id}
+              className={classNames(classes.item)}
+              isActive={activeId === id}
+            />
+          ))}
+        </ul>
+      </Base>
+    </section>
   )
 }
 

@@ -7,6 +7,7 @@
   row-gap: 30px;
 }
 .item {
+  width: 100%;
   h4 {
     margin: 0 0 20px 0;
     font-family: HelveticaR;
@@ -38,6 +39,7 @@
       overflow: hidden;
       background-color: black;
       img {
+        width: 100%;
         transition: 0.4s ease;
         height: 100%;
         object-fit: cover;

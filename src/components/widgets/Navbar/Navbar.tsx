@@ -10,28 +10,30 @@ interface INavbar extends IClassName {
 
 const Navbar: FC<INavbar> = ({ className, linkOnClick }) => {
   return (
-    <ul className={classNames(classes.navbar, {}, [className])}>
-      <li className={classNames(classes.item)}>
-        <Link href={'#anchor-menu'} className={classNames(classes.link)} onClick={linkOnClick}>
-          Menu
-        </Link>
-      </li>
-      <li className={classNames(classes.item)}>
-        <Link href={'#anchor-recipes'} className={classNames(classes.link)} onClick={linkOnClick}>
-          Recipes
-        </Link>
-      </li>
-      <li className={classNames(classes.item)}>
-        <Link href={'#anchor-chefs'} className={classNames(classes.link)} onClick={linkOnClick}>
-          Chefs
-        </Link>
-      </li>
-      <li className={classNames(classes.item)}>
-        <Link href={'#anchor-contacts'} className={classNames(classes.link)} onClick={linkOnClick}>
-          Contacts
-        </Link>
-      </li>
-    </ul>
+    <nav>
+      <ul className={classNames(classes.navbar, {}, [className])}>
+        <li className={classNames(classes.item)}>
+          <Link href={'#anchor-menu'} className={classNames(classes.link)} onClick={linkOnClick}>
+            Menu
+          </Link>
+        </li>
+        <li className={classNames(classes.item)}>
+          <Link href={'#anchor-recipes'} className={classNames(classes.link)} onClick={linkOnClick}>
+            Recipes
+          </Link>
+        </li>
+        <li className={classNames(classes.item)}>
+          <Link href={'#anchor-chefs'} className={classNames(classes.link)} onClick={linkOnClick}>
+            Chefs
+          </Link>
+        </li>
+        <li className={classNames(classes.item)}>
+          <Link href={'#anchor-contacts'} className={classNames(classes.link)} onClick={linkOnClick}>
+            Contacts
+          </Link>
+        </li>
+      </ul>
+    </nav>
   )
 }
 

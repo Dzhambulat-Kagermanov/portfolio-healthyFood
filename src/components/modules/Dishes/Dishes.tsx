@@ -26,47 +26,49 @@ const Dishes: FC<IDishesProps> = ({ className }) => {
   } = setDataPagination(dishesData, dishesPaginationStep)
 
   return (
-    <Base innerClass={classNames(classes.dishes, {}, [className])}>
-      <DoubleTitle className={classNames(classes.title)} backTitleSize='medium' backTitle='Dishes'>
-        Dish Of The Day
-      </DoubleTitle>
-      <ul className={classNames(classes.group)}>
-        {loadingData.map(({ description, id, image, rating, subtitle, title }) => (
-          <DishCard
-            description={description}
-            key={id}
-            id={id}
-            image={image}
-            rating={rating}
-            subtitle={subtitle}
-            title={title}
-            tag='li'
-          />
-        ))}
-      </ul>
-      {isLoading && <Loader className={classNames(classes.loader)} theme='squares' />}
-      {isLoadData && (
-        <Button
-          theme='clear'
-          className={classNames(classes.moreBtn)}
-          onClick={() => {
-            setDataPaginationOnClick(dishesData, {
-              paginationStep,
-              paginationPosition,
-              setPaginationPosition,
-              isLoading,
-              setIsLoading,
-              loadingData,
-              setLoadingData,
-              isLoadData,
-              setIsLoadData
-            })
-          }}
-        >
-          More dishes
-        </Button>
-      )}
-    </Base>
+    <section>
+      <Base innerClass={classNames(classes.dishes, {}, [className])}>
+        <DoubleTitle className={classNames(classes.title)} backTitleSize='medium' backTitle='Dishes'>
+          Dish Of The Day
+        </DoubleTitle>
+        <ul className={classNames(classes.group)}>
+          {loadingData.map(({ description, id, image, rating, subtitle, title }) => (
+            <DishCard
+              description={description}
+              key={id}
+              id={id}
+              image={image}
+              rating={rating}
+              subtitle={subtitle}
+              title={title}
+              tag='li'
+            />
+          ))}
+        </ul>
+        {isLoading && <Loader className={classNames(classes.loader)} theme='squares' />}
+        {isLoadData && (
+          <Button
+            theme='clear'
+            className={classNames(classes.moreBtn)}
+            onClick={() => {
+              setDataPaginationOnClick(dishesData, {
+                paginationStep,
+                paginationPosition,
+                setPaginationPosition,
+                isLoading,
+                setIsLoading,
+                loadingData,
+                setLoadingData,
+                isLoadData,
+                setIsLoadData
+              })
+            }}
+          >
+            More dishes
+          </Button>
+        )}
+      </Base>
+    </section>
   )
 }
 

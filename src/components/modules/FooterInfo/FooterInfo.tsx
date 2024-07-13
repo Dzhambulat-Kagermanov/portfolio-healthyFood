@@ -8,9 +8,11 @@ import Info from 'components/widgets/Info/Info'
 interface IFooterInfoProps extends IClassName {}
 const FooterInfo: FC<IFooterInfoProps> = ({ className }) => {
   return (
-    <Base containerClass={classNames(classes.container)} innerClass={classNames(classes.footer, {}, [className])}>
-      <Info className={classNames(classes.info)} />
-    </Base>
+    <section>
+      <Base containerClass={classNames(classes.container)} innerClass={classNames(classes.footer, {}, [className])}>
+        <Info className={classNames(classes.info)} />
+      </Base>
+    </section>
   )
 }
 
