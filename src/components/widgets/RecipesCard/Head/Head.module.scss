@@ -1,0 +1,16 @@
+.quote {
+  display: flex;
+  flex-flow: column wrap;
+  row-gap: 10px;
+}
+.title {
+  line-height: 30px;
+  letter-spacing: 0.7px;
+  font-size: 20px;
+  font-family: HelveticaR;
+  color: var(--white);
+}
+.author {
+  font-family: HelveticaR;
+  color: var(--grey-light-transparent);
+}

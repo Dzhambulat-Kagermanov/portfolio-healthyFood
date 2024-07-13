@@ -7,6 +7,7 @@ import About from 'components/modules/About/About'
 import Work from 'components/modules/Work/Work'
 import Dishes from 'components/modules/Dishes/Dishes'
 import Chefs from 'components/modules/Chefs/Chefs'
+import Recipes from 'components/modules/Recipes/Recipes'
 
 const App: FC = () => {
   return (
@@ -18,6 +19,7 @@ const App: FC = () => {
       <Work />
       <Dishes />
       <Chefs />
+      <Recipes />
     </div>
   )
 }

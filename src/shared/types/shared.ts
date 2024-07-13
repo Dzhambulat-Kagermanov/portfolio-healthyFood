@@ -6,3 +6,6 @@ export interface IClassName {
 export interface IChildren {
   children: ReactNode
 }
+export interface ITag {
+  tag?: any
+}

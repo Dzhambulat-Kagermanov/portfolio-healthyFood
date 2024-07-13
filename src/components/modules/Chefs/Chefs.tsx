@@ -11,7 +11,7 @@ interface IChefsProps extends IClassName {}
 const Chefs: FC<IChefsProps> = ({ className }) => {
   return (
     <Base innerClass={classNames(classes.chefs, {}, [className])}>
-      <DoubleTitle backTitle='Chefs' className={classNames(classes.title)}>
+      <DoubleTitle backTitleSize='big' backTitle='Chefs' className={classNames(classes.title)}>
         This month's chefs
       </DoubleTitle>
       <ul className={classNames(classes.group)}>
