@@ -40,6 +40,7 @@ const Dishes: FC<IDishesProps> = ({ className }) => {
             rating={rating}
             subtitle={subtitle}
             title={title}
+            tag='li'
           />
         ))}
       </ul>

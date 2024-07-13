@@ -6,6 +6,7 @@ import Head from 'components/modules/Head/Head'
 import About from 'components/modules/About/About'
 import Work from 'components/modules/Work/Work'
 import Dishes from 'components/modules/Dishes/Dishes'
+import Chefs from 'components/modules/Chefs/Chefs'
 
 const App: FC = () => {
   return (
@@ -16,6 +17,7 @@ const App: FC = () => {
       <About />
       <Work />
       <Dishes />
+      <Chefs />
     </div>
   )
 }
