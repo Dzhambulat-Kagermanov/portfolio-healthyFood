@@ -8,9 +8,10 @@ interface IButtonProps extends ButtonHTMLAttributes<HTMLButtonElement>, IClassNa
   theme?: 'fill' | 'outlined' | 'clear'
   circle?: boolean
 }
-const Button: FC<IButtonProps> = ({ className, onClick, children, size, theme, circle, style }) => {
+const Button: FC<IButtonProps> = ({ className, onClick, children, size, theme, circle, style, type }) => {
   return (
     <button
+      type={type || 'button'}
       style={{ ...style }}
       onClick={onClick}
       className={classNames(classes.btn, { [classes.circle]: circle }, [

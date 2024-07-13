@@ -1,0 +1,23 @@
+li {
+  .item {
+    font-size: 18px;
+    font-family: HelveticaR;
+    text-transform: capitalize;
+    color: var(--grey-light-accent);
+    border-bottom: 2px solid var(--grey-light-accent);
+    padding: 10px 15px;
+    width: 100%;
+    min-height: 45px;
+    border-top: none;
+    transition: 0.1s ease;
+    cursor: pointer;
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+  }
+  &:last-child {
+    .item {
+      border-bottom: none;
+    }
+  }
+}

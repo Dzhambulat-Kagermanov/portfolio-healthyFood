@@ -11,6 +11,7 @@ import Recipes from 'components/modules/Recipes/Recipes'
 import Social from 'components/modules/Social/Social'
 import FooterInfo from 'components/modules/FooterInfo/FooterInfo'
 import Footer from 'components/modules/Footer/Footer'
+import Modal from 'components/modules/Modal/Modal'
 
 const App: FC = () => {
   return (
@@ -27,6 +28,7 @@ const App: FC = () => {
         <Social />
         <FooterInfo />
         <Footer />
+        <Modal />
       </main>
     </div>
   )
