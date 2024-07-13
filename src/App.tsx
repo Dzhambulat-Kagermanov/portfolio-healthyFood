@@ -8,6 +8,9 @@ import Work from 'components/modules/Work/Work'
 import Dishes from 'components/modules/Dishes/Dishes'
 import Chefs from 'components/modules/Chefs/Chefs'
 import Recipes from 'components/modules/Recipes/Recipes'
+import Social from 'components/modules/Social/Social'
+import FooterInfo from 'components/modules/FooterInfo/FooterInfo'
+import Footer from 'components/modules/Footer/Footer'
 
 const App: FC = () => {
   return (
@@ -20,6 +23,9 @@ const App: FC = () => {
       <Dishes />
       <Chefs />
       <Recipes />
+      <Social />
+      <FooterInfo />
+      <Footer />
     </div>
   )
 }

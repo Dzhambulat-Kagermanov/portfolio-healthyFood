@@ -1,0 +1,33 @@
+.head {
+  display: flex;
+
+  column-gap: 10px;
+  padding: 18px;
+  border-bottom: 1px solid var(--grey-accent);
+  justify-content: space-between;
+}
+.info {
+  display: flex;
+  column-gap: 10px;
+  align-items: center;
+  h2 {
+    font-family: HelveticaR;
+    color: var(--white);
+    font-size: 13px;
+  }
+}
+.infoImg {
+  padding: 10px;
+  border-radius: 50%;
+  border: 2px solid var(--grey-accent);
+  img {
+    width: 16px;
+    height: 16px;
+  }
+}
+.btn {
+  border-width: 2px;
+  letter-spacing: 0;
+  width: 100px;
+  font-size: 10px;
+}

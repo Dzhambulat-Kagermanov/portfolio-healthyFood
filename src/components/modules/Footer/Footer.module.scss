@@ -1,0 +1,17 @@
+.container {
+  background-color: var(--grey);
+  margin: 0;
+}
+.footer {
+  padding: 40px 0;
+  text-align: center;
+  h6 {
+    font-family: HelveticaR;
+    font-size: 12px;
+    color: var(--grey-light-transparent);
+    margin: 10px 0 0 0;
+  }
+}
+.logo {
+  justify-content: center;
+}

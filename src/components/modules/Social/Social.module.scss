@@ -1,0 +1,59 @@
+.social {
+}
+.group {
+  margin: 80px 0 0 0;
+  display: flex;
+  flex-flow: wrap column;
+  row-gap: 30px;
+}
+.item {
+  h4 {
+    margin: 0 0 20px 0;
+    font-family: HelveticaR;
+    font-size: 16px;
+    color: var(--grey-light-transparent);
+  }
+  h2 {
+    font-family: HelveticaR;
+    font-size: 16px;
+    color: var(--white);
+    line-height: 25px;
+  }
+  h3 {
+    margin: 20px 0 0 0;
+    font-family: HelveticaR;
+    font-size: 16px;
+    color: var(--green);
+  }
+}
+.twitter {
+}
+.instagram {
+  .content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 0;
+    .contentItem {
+      cursor: pointer;
+      overflow: hidden;
+      background-color: black;
+      img {
+        transition: 0.4s ease;
+        height: 100%;
+        object-fit: cover;
+      }
+      &:hover {
+        img {
+          opacity: 0.8;
+          scale: 1.1;
+        }
+      }
+    }
+  }
+}
+.facebook {
+}
+.content {
+}
+.contentItem {
+}
