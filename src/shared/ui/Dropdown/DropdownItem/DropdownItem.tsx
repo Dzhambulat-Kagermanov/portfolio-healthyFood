@@ -5,6 +5,7 @@ import { classNames } from 'shared/lib/classNames/classNames'
 
 interface IDropdownItemProps extends IChildren, IClassName {
   active?: boolean
+  validateValueText: string
 }
 const DropdownItem: FC<IDropdownItemProps> = ({ active, children, className }) => {
   return <div className={classNames(classes.item, {}, [className])}>{children}</div>

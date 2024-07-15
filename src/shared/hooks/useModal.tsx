@@ -1,6 +1,6 @@
 import { useAppDispatch } from './reduxHooks'
 
-const useModal = (type: any) => {
+const useModal = (type: string) => {
   const dispatch = useAppDispatch()
   return () => {
     dispatch({ type })

@@ -1,11 +1,16 @@
+.inputWrapper {
+  font-family: HelveticaR;
+  color: var(--white);
+  font-size: 18px;
+}
 .input {
   width: 100%;
   height: 46px;
   border: 2px solid var(--grey-light-accent);
   border-radius: 5px;
-  color: var(--white);
+  color: inherit;
   font-family: HelveticaR;
-  font-size: 18px;
+  font-size: inherit;
   text-indent: 15px;
   background-color: transparent;
   &::placeholder {
@@ -14,4 +19,20 @@
     font-size: inherit;
     font-family: inherit;
   }
+}
+.label {
+  display: block;
+  margin: 0 0 5px 0;
+  text-transform: capitalize;
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+}
+.error {
+  color: var(--red-error);
+  margin: 5px 0 0 0;
+  text-transform: capitalize;
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 25px;
 }

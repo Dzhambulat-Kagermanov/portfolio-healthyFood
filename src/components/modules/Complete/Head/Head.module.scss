@@ -1,0 +1,23 @@
+.head {
+  display: flex;
+  flex-flow: wrap column;
+  align-items: center;
+}
+.img {
+  img {
+    width: 60px;
+  }
+}
+.title {
+  line-height: 35px;
+  font-family: HelveticaR;
+  font-size: 28px;
+  text-align: center;
+  color: var(--green);
+  span {
+    line-height: 70px;
+    font-size: 32px;
+    text-transform: uppercase;
+    font-family: HelveticaB;
+  }
+}

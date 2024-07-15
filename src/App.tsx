@@ -12,13 +12,14 @@ import Social from 'components/modules/Social/Social'
 import FooterInfo from 'components/modules/FooterInfo/FooterInfo'
 import Footer from 'components/modules/Footer/Footer'
 import Modal from 'components/modules/Modal/Modal'
+import Complete from 'components/modules/Complete/Complete'
 
 const App: FC = () => {
   return (
     <div className='App'>
       <Header />
-      <BurgerMenu />
       <main>
+        <BurgerMenu />
         <Head />
         <About />
         <Work />
@@ -29,6 +30,7 @@ const App: FC = () => {
         <FooterInfo />
         <Footer />
         <Modal />
+        <Complete />
       </main>
     </div>
   )

@@ -41,9 +41,13 @@
 }
 
 .head {
+  will-change: margin;
   transition: 0.2s ease;
   position: relative;
   z-index: 2;
+  h2 {
+    will-change: font-size, line-height;
+  }
 }
 .footer {
   position: relative;
