@@ -1,4 +1,4 @@
-import { FC, FormHTMLAttributes } from 'react'
+import { FC, FormHTMLAttributes, useState } from 'react'
 import { IClassName } from 'shared/types/shared'
 import { classNames } from 'shared/lib/classNames/classNames'
 import Input from 'shared/ui/Input/Input'
@@ -11,9 +11,11 @@ import classes from './Form.module.scss'
 import { modalValidateSchema } from 'shared/constants/modal'
 import { useAppDispatch } from 'shared/hooks/reduxHooks'
 import { setCompleteTitle, toggleComplete } from 'app/providers/store/complete/completeSlice'
+import { masks } from 'shared/constants/inputMasks'
 
 interface IFormProps extends IClassName, FormHTMLAttributes<HTMLFormElement> {}
 const Form: FC<IFormProps> = ({ className, ...other }) => {
+  const [phoneMask, setPhoneMask] = useState<string>(masks.phone.en)
   const dispatch = useAppDispatch()
   return (
     <Formik
@@ -29,7 +31,7 @@ const Form: FC<IFormProps> = ({ className, ...other }) => {
       onSubmit={(value, { resetForm, setSubmitting }) => {
         const validateData: any = value
         validateData.modalDate = { date: validateData.modalDate, format: 'DMY' }
-        alert('Data show in the console. Данные выведены в консоль')
+        alert(JSON.stringify(validateData, null, 2))
         console.log(validateData)
         dispatch({
           type: setCompleteTitle.type,
@@ -56,7 +58,13 @@ const Form: FC<IFormProps> = ({ className, ...other }) => {
           label='Name'
           id='modalName'
         />
-        <Input className={classNames(classes.input)} placeholder='Your phone' name='modalPhone' label='Phone' />
+        <Input
+          className={classNames(classes.input)}
+          placeholder='Your phone'
+          name='modalPhone'
+          label='Phone'
+          mask={phoneMask}
+        />
         <Input className={classNames(classes.input)} placeholder='Your mail' name='modalMail' label='Mail' />
         <Input className={classNames(classes.input)} placeholder='Order date' name='modalDate' label='Date' />
         <Dropdown

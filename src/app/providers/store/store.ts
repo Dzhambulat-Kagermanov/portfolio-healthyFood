@@ -4,7 +4,8 @@ import burgerMenuSlice from './burgerMenu/burgerMenuSlice'
 import completeSlice from './complete/completeSlice'
 
 const store = configureStore({
-  reducer: { modal: modalSlice, burgerMenu: burgerMenuSlice, complete: completeSlice }
+  reducer: { modal: modalSlice, burgerMenu: burgerMenuSlice, complete: completeSlice },
+  middleware: (getDefaultMiddleware) => getDefaultMiddleware({ serializableCheck: false })
 })
 
 export default store

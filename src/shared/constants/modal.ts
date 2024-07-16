@@ -1,3 +1,4 @@
+import { getDateFormat } from 'shared/lib/getDateFormat/getDateFormat'
 import * as Yup from 'yup'
 
 type TAnyKeysRegExp = {
@@ -27,6 +28,30 @@ const mail = Yup.string()
 const date = Yup.string()
   .matches(regExps.modalDate, 'Invalid entry. Use only numbers')
   .required('Required field. Enter date of visit ')
+  .test(
+    'modalDate',
+    () => {
+      return 'You cannot specify a past date'
+    },
+    (value) => {
+      let state = true
+      const splitVal: string[] = value.split('.')
+      const nowDateSplit: string[] = getDateFormat({ nowDate: true }).split('.')
+
+      for (let index = nowDateSplit.length; index >= 0; index--) {
+        const nowItem: string = nowDateSplit[index]
+        if (nowItem > splitVal[index]) {
+          state = !state
+          break
+        }
+        if (nowItem < splitVal[index]) {
+          break
+        }
+      }
+
+      return state
+    }
+  )
 
 const visit = Yup.string().required('Select one parameter')
 const additional = Yup.string().required('Select one parameter')
