@@ -2,15 +2,18 @@ import { FC, InputHTMLAttributes, ReactNode } from 'react'
 import classes from './Input.module.scss'
 import { IClassName } from 'shared/types/shared'
 import { classNames } from 'shared/lib/classNames/classNames'
-import { Field, ErrorMessage as Error } from 'formik'
-import { IMask, IMaskInput } from 'react-imask'
+import { Field, ErrorMessage as Error, useFormikContext } from 'formik'
+import { IMaskInput } from 'react-imask'
 
-interface IInputProps extends IClassName, InputHTMLAttributes<HTMLInputElement> {
+interface IInputProps extends IClassName, Omit<InputHTMLAttributes<HTMLInputElement>, keyof { min: '1'; max: '1' }> {
   label?: ReactNode
   name: string
-  mask?: string
+  mask?: string | DateConstructor
+  min?: Date
+  max?: Date
 }
-const Input: FC<IInputProps> = ({ className, onChange, type, placeholder, name, id, label, mask }) => {
+const Input: FC<IInputProps> = ({ className, type, placeholder, name, id, label, mask, ...other }) => {
+  const { setFieldValue } = useFormikContext()
   return (
     <div className={classNames(classes.inputWrapper, {}, [className])}>
       {label && (
@@ -22,12 +25,16 @@ const Input: FC<IInputProps> = ({ className, onChange, type, placeholder, name, 
         {({ field, form: { touched, errors }, meta }: any) => {
           return (
             <IMaskInput
+              {...other}
               className={classNames(classes.input)}
               placeholder={placeholder || 'Enter text'}
               {...field}
               mask={mask}
               lazy={false}
               unmask
+              onAccept={(value) => {
+                setFieldValue(name, value)
+              }}
             />
           )
         }}

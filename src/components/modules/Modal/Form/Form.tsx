@@ -15,7 +15,7 @@ import { masks } from 'shared/constants/inputMasks'
 
 interface IFormProps extends IClassName, FormHTMLAttributes<HTMLFormElement> {}
 const Form: FC<IFormProps> = ({ className, ...other }) => {
-  const [phoneMask, setPhoneMask] = useState<string>(masks.phone.en)
+  const [phoneMask, setPhoneMask] = useState<string>(masks.phone.any)
   const dispatch = useAppDispatch()
   return (
     <Formik
@@ -31,8 +31,8 @@ const Form: FC<IFormProps> = ({ className, ...other }) => {
       onSubmit={(value, { resetForm, setSubmitting }) => {
         const validateData: any = value
         validateData.modalDate = { date: validateData.modalDate, format: 'DMY' }
+        validateData.modalPhone = `+${validateData.modalPhone}`
         alert(JSON.stringify(validateData, null, 2))
-        console.log(validateData)
         dispatch({
           type: setCompleteTitle.type,
           payload: {
@@ -66,7 +66,15 @@ const Form: FC<IFormProps> = ({ className, ...other }) => {
           mask={phoneMask}
         />
         <Input className={classNames(classes.input)} placeholder='Your mail' name='modalMail' label='Mail' />
-        <Input className={classNames(classes.input)} placeholder='Order date' name='modalDate' label='Date' />
+        <Input
+          className={classNames(classes.input)}
+          placeholder='Order date'
+          name='modalDate'
+          label='Date'
+          mask={Date}
+          min={new Date(999, 0, 1)}
+          max={new Date(new Date().getFullYear() + 3, 0, 1)}
+        />
         <Dropdown
           className={classNames(classes.dropdown)}
           placeholder='Select the purpose of your visit'
