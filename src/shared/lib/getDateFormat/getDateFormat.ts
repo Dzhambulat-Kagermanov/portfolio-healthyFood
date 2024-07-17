@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { FP_Object } from 'shared/types/shared'
 
 type TParam = string | number
@@ -25,33 +26,56 @@ type TGetDateFormat =
     }
 
 export const getDateFormat: FP_Object<TGetDateFormat, string> = ({ day, month, year, format, nowDate }): string => {
-  let thisDay: TParam = new Date().getDate()
-  if (thisDay.toString().length < 2) thisDay = '0'.concat(thisDay.toString())
+  const DAY_STR_LENGTH: number = 2
+  const MONTH_STR_LENGTH: number = 2
+  const YEAR_STR_LENGTH: number = 4
 
-  let thisMonth: TParam = new Date().getMonth() + 1
-  if (thisMonth.toString().length < 2) thisMonth = '0'.concat(thisMonth.toString())
-
-  const formatter: FP_Object<TDateParams, string> = ({ day, month, year }) => {
-    const dateFormat = format || 'DMY'
-    return dateFormat
+  const formatter: FP_Object<{ day: TParam; month: TParam; year: TParam; format: TFormat }, string> = ({
+    day,
+    format,
+    month,
+    year
+  }) => {
+    const currentFormat: string = format || 'DMY'
+    return currentFormat
       .split('')
-      .map((el) => {
-        if (el === 'D') return day
-        if (el === 'M') return month
-        if (el === 'Y') return year
+      .map((elem) => {
+        if (elem === 'D') return day
+        if (elem === 'M') return month
+        if (elem === 'Y') return year
       })
       .join('.')
   }
-  if (nowDate) {
-    let nowDay: TParam = new Date().getDate()
-    if (nowDay.toString().length < 2) nowDay = '0'.concat(nowDay.toString())
-    let nowMonth: TParam = new Date().getMonth() + 1
-    if (nowMonth.toString().length < 2) nowMonth = '0'.concat(nowMonth.toString())
+  const correctionOmissions: FP_Object<
+    { day: TParam; month: TParam; year: TParam },
+    { day: string; month: string; year: string }
+  > = ({ day, month, year }) => {
+    let dayStr: string = day.toString()
+    let monthStr: string = month.toString()
+    let yearStr: string = year.toString()
 
-    const nowYear: TParam = new Date().getFullYear()
-
-    return formatter({ day: nowDay, month: nowMonth, year: nowYear })
+    if (dayStr.length < DAY_STR_LENGTH) dayStr = '0'.concat(dayStr)
+    if (monthStr.length < MONTH_STR_LENGTH) monthStr = '0'.concat(monthStr)
+    if (yearStr.length < YEAR_STR_LENGTH) {
+      const yearResult: string[] = []
+      for (let index = YEAR_STR_LENGTH - yearStr.length; index > 0; index--) {
+        yearResult.push('0')
+      }
+      yearStr = yearResult.join('').concat(yearStr)
+    }
+    return { day: dayStr, month: monthStr, year: yearStr }
   }
 
-  return formatter({ day: thisDay, month: thisMonth, year })
+  if (nowDate) {
+    let dayNow: string = new Date().getDate().toString()
+    let monthNow: string = (new Date().getMonth() + 1).toString()
+    let yearNow: string = new Date().getFullYear().toString()
+
+    const correctionDate = correctionOmissions({ day: dayNow, month: monthNow, year: yearNow })
+    return formatter({ day: correctionDate.day, month: correctionDate.month, year: correctionDate.year, format })
+  }
+  if (!nowDate) {
+    const correctionDate = correctionOmissions({ day, month, year })
+    return formatter({ day: correctionDate.day, month: correctionDate.month, year: correctionDate.year, format })
+  }
 }

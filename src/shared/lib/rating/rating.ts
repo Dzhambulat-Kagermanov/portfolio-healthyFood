@@ -1,34 +1,34 @@
-export interface IStarsPosition {
+export interface IRatingPositions {
   expandedRating: string | number
-  starsPosition: string[]
+  ratingPositions: string[]
 }
 
-export const starsPositions = (rating: number): IStarsPosition => {
-  let expandedRating: number | string = rating
-  const starsPosition: string[] = []
+export const rating = (rating: number): IRatingPositions => {
+  let expandedRating: number | string = rating.toString()
+  const ratingPositions: string[] = []
   const ratingFlooring: number = Math.floor(rating)
 
   if (rating % 1 === 0) {
     for (let index = 0; index < rating; index++) {
-      starsPosition.push('full')
+      ratingPositions.push('full')
     }
     if (5 - rating !== 0) {
       for (let index = 0; index < 5 - rating; index++) {
-        starsPosition.push('empty')
+        ratingPositions.push('empty')
       }
     }
     expandedRating = `${rating}.0`
   } else {
     for (let index = 0; index < ratingFlooring; index++) {
-      starsPosition.push('full')
+      ratingPositions.push('full')
     }
-    starsPosition.push('half')
+    ratingPositions.push('half')
 
     if (5 - rating >= 1) {
       for (let index = 1; index < Math.ceil(5 - rating); index++) {
-        starsPosition.push('empty')
+        ratingPositions.push('empty')
       }
     }
   }
-  return { expandedRating, starsPosition }
+  return { expandedRating, ratingPositions }
 }
