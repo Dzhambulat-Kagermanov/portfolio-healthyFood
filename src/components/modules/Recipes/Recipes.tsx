@@ -7,13 +7,15 @@ import DoubleTitle from 'shared/ui/DoubleTitle/DoubleTitle'
 import RecipesCard from 'components/widgets/RecipesCard/RecipesCard'
 import { recipesData } from 'shared/constants/recipes'
 
-interface IRecipesProps extends IClassName {}
-const Recipes: FC<IRecipesProps> = ({ className }) => {
+interface IRecipesProps extends IClassName {
+  id?: string
+}
+const Recipes: FC<IRecipesProps> = ({ className, id }) => {
   const [activeId, setActivaId] = useState<number>(0)
 
   return (
     <section>
-      <Base innerClass={classNames(classes.recipes, {}, [className])}>
+      <Base innerClass={classNames(classes.recipes, {}, [className])} containerID={classNames(id)}>
         <DoubleTitle backTitle='Recipes' className={classNames(classes.title)} backTitleSize='small'>
           Recipes From Our Chefs
         </DoubleTitle>

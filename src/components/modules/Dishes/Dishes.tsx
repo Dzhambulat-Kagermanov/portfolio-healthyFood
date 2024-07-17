@@ -10,8 +10,10 @@ import Button from 'shared/ui/Button/Button'
 import Loader from 'shared/ui/Loader/Loader'
 import { setDataPagination, setDataPaginationOnClick } from 'shared/lib/setDataPagination/setDataPagination'
 
-interface IDishesProps extends IClassName {}
-const Dishes: FC<IDishesProps> = ({ className }) => {
+interface IDishesProps extends IClassName {
+  id?: string
+}
+const Dishes: FC<IDishesProps> = ({ className, id }) => {
   const dishesPaginationStep: number = 3
   const {
     paginationStep,
@@ -27,7 +29,7 @@ const Dishes: FC<IDishesProps> = ({ className }) => {
 
   return (
     <section>
-      <Base innerClass={classNames(classes.dishes, {}, [className])}>
+      <Base innerClass={classNames(classes.dishes, {}, [className])} containerID={classNames(id)}>
         <DoubleTitle className={classNames(classes.title)} backTitleSize='medium' backTitle='Dishes'>
           Dish Of The Day
         </DoubleTitle>

@@ -7,11 +7,13 @@ import ChefsCard from 'components/widgets/ChefsCard/ChefsCard'
 import { chefsData } from 'shared/constants/chefs'
 import DoubleTitle from 'shared/ui/DoubleTitle/DoubleTitle'
 
-interface IChefsProps extends IClassName {}
-const Chefs: FC<IChefsProps> = ({ className }) => {
+interface IChefsProps extends IClassName {
+  id?: string
+}
+const Chefs: FC<IChefsProps> = ({ className, id }) => {
   return (
     <section>
-      <Base innerClass={classNames(classes.chefs, {}, [className])}>
+      <Base innerClass={classNames(classes.chefs, {}, [className])} containerID={classNames(id)}>
         <DoubleTitle backTitleSize='big' backTitle='Chefs' className={classNames(classes.title)}>
           This month's chefs
         </DoubleTitle>

@@ -23,10 +23,10 @@ const App: FC = () => {
         <Head />
         <About />
         <Work />
-        <Dishes />
-        <Chefs />
-        <Recipes />
-        <Social />
+        <Dishes id='anchor-menu' />
+        <Chefs id='anchor-chefs' />
+        <Recipes id='anchor-recipes' />
+        <Social id='anchor-contacts' />
         <FooterInfo />
         <Footer />
         <Modal />

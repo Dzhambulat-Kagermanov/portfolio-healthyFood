@@ -6,11 +6,13 @@ import DoubleTitle from 'shared/ui/DoubleTitle/DoubleTitle'
 import SocialCard from 'components/widgets/SocialCard/SocialCard'
 import Base from 'shared/ui/Base/Base'
 
-interface ISocialProps extends IClassName {}
-const Social: FC<ISocialProps> = ({ className }) => {
+interface ISocialProps extends IClassName {
+  id?: string
+}
+const Social: FC<ISocialProps> = ({ className, id }) => {
   return (
     <section>
-      <Base innerClass={classNames(classes.social, {}, [className])}>
+      <Base innerClass={classNames(classes.social, {}, [className])} containerID={classNames(id)}>
         <DoubleTitle backTitleSize='medium' backTitle='Social' className={classNames(classes.title)}>
           We in Social
         </DoubleTitle>

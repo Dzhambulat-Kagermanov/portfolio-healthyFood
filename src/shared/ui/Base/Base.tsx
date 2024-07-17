@@ -8,11 +8,12 @@ interface IBaseProps extends IChildren {
   innerClass?: string
   containerClass?: string
   containerChild?: ReactNode
+  containerID?: string
 }
 
-const Base: FC<IBaseProps> = ({ innerClass, containerClass, children, containerChild }) => {
+const Base: FC<IBaseProps> = ({ innerClass, containerClass, children, containerChild, containerID }) => {
   return (
-    <div className={classNames(classes.container, {}, [containerClass, adaptiveCls.parentBlock])}>
+    <div className={classNames(classes.container, {}, [containerClass, adaptiveCls.parentBlock])} id={containerID}>
       {containerChild}
       <div className={classNames(classes.inner, {}, [innerClass, adaptiveCls.inner])}>{children}</div>
     </div>
