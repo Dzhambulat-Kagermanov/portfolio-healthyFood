@@ -57,11 +57,11 @@ export const getDateFormat: FP_Object<TGetDateFormat, string> = ({ day, month, y
     if (dayStr.length < DAY_STR_LENGTH) dayStr = '0'.concat(dayStr)
     if (monthStr.length < MONTH_STR_LENGTH) monthStr = '0'.concat(monthStr)
     if (yearStr.length < YEAR_STR_LENGTH) {
-      const yearResult: string[] = []
+      let yearResult: string = ''
       for (let index = YEAR_STR_LENGTH - yearStr.length; index > 0; index--) {
-        yearResult.push('0')
+        yearResult += '0'
       }
-      yearStr = yearResult.join('').concat(yearStr)
+      yearStr = yearResult.concat(yearStr)
     }
     return { day: dayStr, month: monthStr, year: yearStr }
   }

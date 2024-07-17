@@ -10,7 +10,7 @@ const regExps: TAnyKeysRegExp = {
   modalMail:
     /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
   modalDate: /[\d.]{10,10}/,
-  modalPhone: /^[\+]?[0-9]{0,3}\W?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/gim
+  modalPhone: /\d{11}/
 }
 
 const name = Yup.string()
@@ -26,8 +26,13 @@ const mail = Yup.string()
   .required('Required field. Entry your mail')
 
 const date = Yup.string()
-  .matches(regExps.modalDate, 'Invalid entry. Use only numbers')
-  .required('Required field. Enter date of visit ')
+  .test(
+    'modalDate',
+    () => 'Required field. Enter full date of visit',
+    (value) => {
+      return value.length === 10
+    }
+  )
   .test(
     'modalDate',
     () => {
@@ -52,6 +57,7 @@ const date = Yup.string()
       return state
     }
   )
+  .matches(regExps.modalDate, 'Invalid entry. Use only numbers')
 
 const visit = Yup.string().required('Select one parameter')
 const additional = Yup.string().required('Select one parameter')
