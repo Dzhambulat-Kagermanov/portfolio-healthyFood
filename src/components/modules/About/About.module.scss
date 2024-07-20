@@ -7,10 +7,11 @@
 }
 .subtitle {
   font-family: HelveticaR;
-  font-size: 14px;
+  font-size: var(--fsize-main);
   line-height: 25px;
   color: var(--white);
-  margin: 70px 0 50px 0;
+  margin-top: var(--modules-content-margin);
+  margin-bottom: 50px;
   text-align: center;
 }
 

@@ -11,10 +11,27 @@
   --grey-light-transparent: #a4a8b2;
   --white: #d9d9d9;
   --red-error: rgb(255, 71, 71);
+
+  --header-height: 70px;
+
+  --modules-content-margin: 80px;
+
+  --fsize-main: 14px;
+  --fsize-second: 16px;
+  --fsize-third: 18px;
+
+  --fsize-title-main: 20px;
+  --fsize-title-back-huge: 80px;
+  --fsize-title-back-big: 70px;
+  --fsize-title-back-medium: 60px;
+  --fsize-title-back-small: 55px;
 }
 
 .--dev {
   background-color: rgba(255, 192, 203, 0.8);
+}
+html {
+  overflow-x: hidden;
 }
 
 body {

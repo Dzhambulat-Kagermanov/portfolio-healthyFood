@@ -8,13 +8,13 @@
   justify-content: center;
 }
 .big {
-  font-size: 18px;
+  font-size: var(--fsize-third);
   padding: 0 15px;
   width: 195px;
   height: 70px;
 }
 .medium {
-  font-size: 14px;
+  font-size: var(--fsize-main);
   padding: 0 15px;
   width: 150px;
   height: 45px;

@@ -3,7 +3,7 @@
   text-align: center;
 }
 .mainTitle {
-  font-size: 20px;
+  font-size: var(--fsize-title-main);
   font-family: HelveticaR;
   color: var(--white);
   z-index: 3;
@@ -33,14 +33,14 @@
   }
 }
 .backTitle-huge {
-  font-size: 80px;
+  font-size: var(--fsize-title-back-huge);
 }
 .backTitle-big {
-  font-size: 70px;
+  font-size: var(--fsize-title-back-big);
 }
 .backTitle-medium {
-  font-size: 60px;
+  font-size: var(--fsize-title-back-medium);
 }
 .backTitle-small {
-  font-size: 55px;
+  font-size: var(--fsize-title-back-small);
 }

@@ -1,13 +1,13 @@
 import { FC, ReactNode } from 'react'
 import { IClassName } from 'shared/types/shared'
-import { Swiper, SwiperSlide } from 'swiper/react'
+import { Swiper, SwiperProps, SwiperSlide } from 'swiper/react'
 import 'swiper/css'
 import { classNames } from 'shared/lib/classNames/classNames'
 import { IAboutSlider } from 'shared/constants/about'
 import { Navigation } from 'swiper/modules'
 import classes from './Slider.module.scss'
 
-interface ISliderProps extends IClassName {
+interface ISliderProps extends IClassName, SwiperProps {
   sliderItems: IAboutSlider[]
   btnPrev: ReactNode
   btnPrevID: string

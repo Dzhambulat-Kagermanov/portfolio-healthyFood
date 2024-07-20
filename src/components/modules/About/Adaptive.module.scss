@@ -1,0 +1,45 @@
+@media screen and (min-width: 0) {
+}
+@media screen and (min-width: 361px) {
+}
+@media screen and (min-width: 421px) {
+}
+@media screen and (min-width: 481px) {
+}
+@media screen and (min-width: 601px) {
+}
+@media screen and (min-width: 769px) {
+}
+@media screen and (min-width: 901px) {
+  .subtitle {
+    max-width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+@media screen and (min-width: 1025px) {
+}
+@media screen and (min-width: 1281px) {
+  .subtitle {
+    max-width: 60%;
+  }
+  .slider {
+    & > button {
+      height: 60px;
+      width: 60px;
+      img {
+        width: 19px;
+        height: 19px;
+      }
+    }
+  }
+  .sliderItem {
+    img {
+      height: 350px;
+    }
+  }
+}
+@media screen and (min-width: 1441px) {
+}
+@media screen and (min-width: 1537px) {
+}

@@ -9,6 +9,8 @@ export interface IChefsCardHead {
   avatar: string
   name: string
   speciality: string
+  footerClass?: string
+  headClass?: string
 }
 export interface IChefsCardFooter {
   portfolio: string[]
@@ -16,13 +18,22 @@ export interface IChefsCardFooter {
 interface IChefsCardProps extends IClassName, IChefsCardHead, IChefsCardFooter {
   tag?: any
 }
-const ChefsCard: FC<IChefsCardProps> = ({ avatar, name, portfolio, speciality, className, tag }) => {
+const ChefsCard: FC<IChefsCardProps> = ({
+  avatar,
+  name,
+  portfolio,
+  speciality,
+  className,
+  tag,
+  headClass,
+  footerClass
+}) => {
   const Tag = tag || 'div'
 
   return (
     <Tag className={classNames(classes.chefs, {}, [className])}>
-      <Head avatar={avatar} name={name} speciality={speciality} className={classNames(classes.head)} />
-      <Footer portfolio={portfolio} className={classNames(classes.footer)} />
+      <Head avatar={avatar} name={name} speciality={speciality} className={classNames(classes.head, {}, [headClass])} />
+      <Footer portfolio={portfolio} className={classNames(classes.footer, {}, [footerClass])} />
     </Tag>
   )
 }

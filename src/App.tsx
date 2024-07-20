@@ -13,10 +13,12 @@ import FooterInfo from 'components/modules/FooterInfo/FooterInfo'
 import Footer from 'components/modules/Footer/Footer'
 import Modal from 'components/modules/Modal/Modal'
 import Complete from 'components/modules/Complete/Complete'
+import adaptive from './Adaptive.module.scss'
+import { classNames } from 'shared/lib/classNames/classNames'
 
 const App: FC = () => {
   return (
-    <div className='App'>
+    <div className={classNames('App', {}, [adaptive.App])}>
       <Header />
       <main>
         <BurgerMenu />

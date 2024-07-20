@@ -10,6 +10,7 @@ export interface ISocialCardHead {
 }
 
 interface ISocialCardProps extends IClassName, IChildren, ITag, ISocialCardHead {
+  headClass?: string
   contentClass?: string
   contentTag?: any
 }
@@ -20,6 +21,7 @@ const SocialCard: FC<ISocialCardProps> = ({
   tag,
   className,
   contentClass,
+  headClass,
   contentTag
 }) => {
   const Tag: typeof tag = tag || 'div'
@@ -27,7 +29,7 @@ const SocialCard: FC<ISocialCardProps> = ({
 
   return (
     <Tag className={classNames(classes.social, {}, [className])}>
-      <Head socialImg={socialImg} socialName={socialName} className={classNames(classes.head)} />
+      <Head socialImg={socialImg} socialName={socialName} className={classNames(classes.head, {}, [headClass])} />
       <ContentTag className={classNames(classes.content, {}, [contentClass])}>{children}</ContentTag>
     </Tag>
   )

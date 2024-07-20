@@ -6,6 +6,7 @@
   column-gap: 10px;
   justify-content: center;
   margin: 20px 0 0 0;
+  color: var(--grey-light-transparent);
 
   & > h2 {
     line-height: 30px;
@@ -16,12 +17,12 @@
     background-color: black;
     border-radius: 5px;
     letter-spacing: 1px;
-    color: var(--white);
+    color: inherit;
   }
   & > h3 {
-    color: var(--white);
+    color: inherit;
     font-family: HelveticaR;
-    font-size: 16px;
+    color: inherit;
   }
 }
 
@@ -36,9 +37,9 @@
   align-items: center;
   column-gap: 5px;
   h2 {
-    color: var(--white);
+    color: inherit;
     font-family: HelveticaR;
-    font-size: 16px;
+    font-size: var(--fsize-second);
   }
   img {
     width: 20px;

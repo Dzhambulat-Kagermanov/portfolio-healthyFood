@@ -7,6 +7,7 @@ import { classNames } from 'shared/lib/classNames/classNames'
 import classes from './BurgerMenu.module.scss'
 import { useAppDispatch, useAppSelector } from 'shared/hooks/reduxHooks'
 import { toggleBurgerMenu } from 'app/providers/store/burgerMenu/burgerMenuSlice'
+import adaptive from './Adaptive.module.scss'
 
 interface IBurgerMenuProps extends IClassName {}
 
@@ -27,6 +28,8 @@ const BurgerMenu: FC<IBurgerMenuProps> = ({ className }) => {
           }}
         />
         <Navbar
+          linkClass={classNames(adaptive.linkItem)}
+          linkItemClass={classNames(adaptive.linkItem)}
           className={classNames(classes.links)}
           linkOnClick={() => {
             dispatch({ type: toggleBurgerMenu.type, payload: {} })

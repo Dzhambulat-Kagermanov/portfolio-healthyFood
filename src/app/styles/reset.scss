@@ -9,6 +9,7 @@ html {
   -moz-text-size-adjust: none;
   -webkit-text-size-adjust: none;
   text-size-adjust: none;
+  scroll-behavior: smooth;
 }
 ul,
 ol {
@@ -30,9 +31,12 @@ label {
 h1,
 h2,
 h3,
-h4 {
+h4,
+h5,
+h6 {
   text-wrap: balance;
   font-size: inherit;
+  white-space: break-spaces;
 }
 a:not([class]) {
   text-decoration-skip-ink: auto;

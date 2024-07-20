@@ -1,0 +1,27 @@
+@media screen and (min-width: 769px) {
+  .info {
+    flex-flow: wrap row;
+    gap: 30px;
+    li {
+      flex-grow: 1;
+      flex-flow: wrap column;
+      flex-basis: calc(50% - 30px);
+      align-items: center;
+    }
+  }
+}
+@media screen and (min-width: 901px) {
+  .info {
+    li {
+      flex-basis: calc(100% / 3 - 30px);
+    }
+  }
+}
+@media screen and (min-width: 1025px) {
+}
+@media screen and (min-width: 1281px) {
+}
+@media screen and (min-width: 1441px) {
+}
+@media screen and (min-width: 1537px) {
+}

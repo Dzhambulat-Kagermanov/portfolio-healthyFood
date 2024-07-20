@@ -12,7 +12,7 @@ export const recipesData: IRecipesData[] = [
     id: 1,
     author: 'Sophie Keller',
     date: '05 Jul 2024',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+    description: 'Lorem sunt cumque facilis nihil assumenda laborum modi',
     socialData: {
       comments: 19,
       views: 126
@@ -23,7 +23,7 @@ export const recipesData: IRecipesData[] = [
     id: 2,
     author: 'Oscar Jones',
     date: '28 Feb 2024',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+    description: 'Lorem alias dolores ab impedit fuga magnam perferendis quasi adipiscing elit',
     socialData: {
       comments: 19,
       views: 126
@@ -34,7 +34,7 @@ export const recipesData: IRecipesData[] = [
     id: 3,
     author: 'Jacob Roberts',
     date: '01 Jan 2024',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+    description: 'Lorem tenetur aspernatur, cupiditate, rerum et nulla, consectetur adipiscing wdoilop ghopres',
     socialData: {
       comments: 19,
       views: 126

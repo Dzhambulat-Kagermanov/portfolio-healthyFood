@@ -1,4 +1,4 @@
-import { FC, ReactNode, useState } from 'react'
+import { FC } from 'react'
 import classes from './Dishes.module.scss'
 import { IClassName } from 'shared/types/shared'
 import DoubleTitle from 'shared/ui/DoubleTitle/DoubleTitle'
@@ -9,12 +9,23 @@ import { dishesData } from 'shared/constants/dishes'
 import Button from 'shared/ui/Button/Button'
 import Loader from 'shared/ui/Loader/Loader'
 import { setDataPagination, setDataPaginationOnClick } from 'shared/lib/setDataPagination/setDataPagination'
+import adaptive from './Adaptive.module.scss'
+import { SCREEN_WIDTH } from 'shared/constants/global'
 
 interface IDishesProps extends IClassName {
   id?: string
 }
 const Dishes: FC<IDishesProps> = ({ className, id }) => {
-  const dishesPaginationStep: number = 3
+  let dishesPaginationStep: number
+
+  if (SCREEN_WIDTH >= 901) {
+    dishesPaginationStep = 5
+  } else if (SCREEN_WIDTH >= 601) {
+    dishesPaginationStep = 3
+  } else {
+    dishesPaginationStep = 2
+  }
+
   const {
     paginationStep,
     paginationPosition,
@@ -33,9 +44,13 @@ const Dishes: FC<IDishesProps> = ({ className, id }) => {
         <DoubleTitle className={classNames(classes.title)} backTitleSize='medium' backTitle='Dishes'>
           Dish Of The Day
         </DoubleTitle>
-        <ul className={classNames(classes.group)}>
+        <ul className={classNames(classes.group, {}, [adaptive.group])}>
           {loadingData.map(({ description, id, image, rating, subtitle, title }) => (
             <DishCard
+              className={classNames(adaptive.item)}
+              headClass={classNames(adaptive.itemHead)}
+              contentClass={classNames(adaptive.itemContent)}
+              footerClass={classNames(adaptive.itemFooter)}
               description={description}
               key={id}
               id={id}

@@ -27,7 +27,7 @@
   padding-top: 30px;
   padding-bottom: 30px;
   display: flex;
-  row-gap: 20px;
+  row-gap: calc(var(--modules-content-margin) - 20px);
   flex-flow: wrap column;
   min-height: 100%;
 }

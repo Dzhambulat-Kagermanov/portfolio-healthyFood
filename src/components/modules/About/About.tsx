@@ -7,6 +7,7 @@ import Base from 'shared/ui/Base/Base'
 import Slider from 'shared/ui/Slider/Slider'
 import { aboutSlider } from 'shared/constants/about'
 import Button from 'shared/ui/Button/Button'
+import adaptive from './Adaptive.module.scss'
 
 interface IAboutProps extends IClassName {}
 const About: FC<IAboutProps> = ({ className }) => {
@@ -16,14 +17,27 @@ const About: FC<IAboutProps> = ({ className }) => {
         <DoubleTitle backTitle='About' className={classes.title}>
           The Basics Of Healthy Food
         </DoubleTitle>
-        <h2 className={classNames(classes.subtitle)}>
+        <h2 className={classNames(classes.subtitle, {}, [adaptive.subtitle])}>
           In aliqua ea ullamco ad est ex non deserunt nulla. Consectetur sint ea aliquip aliquip consectetur voluptate
           est. Eu minim dolore laboris enim mollit voluptate irure esse aliquip.
         </h2>
         <Slider
-          className={classNames(classes.slider)}
+          breakpoints={{
+            0: {
+              slidesPerView: 1
+            },
+            601: {
+              spaceBetween: 10,
+              slidesPerView: 2
+            },
+            901: {
+              spaceBetween: 20,
+              slidesPerView: 2
+            }
+          }}
+          className={classNames(classes.slider, {}, [adaptive.slider])}
           sliderItems={aboutSlider}
-          itemClass={classNames(classes.sliderItem)}
+          itemClass={classNames(classes.sliderItem, {}, [adaptive.sliderItem])}
           btnPrev={
             <Button circle theme='outlined' className={classNames(classes.sliderBtn, {}, [classes.sliderBtnPrev])}>
               <img src='images/arrow.svg' alt='arrow' />

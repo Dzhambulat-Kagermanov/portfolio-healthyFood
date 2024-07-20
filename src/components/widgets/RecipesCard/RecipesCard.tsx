@@ -19,6 +19,8 @@ interface IRecipesCardProps extends IClassName, ITag, IRecipesCardFooter, IRecip
   id: number
   isActive: boolean
   setActiveId: (id: number) => void
+  footerClass?: string
+  headClass?: string
 }
 const RecipesCard: FC<IRecipesCardProps> = ({
   id,
@@ -30,7 +32,9 @@ const RecipesCard: FC<IRecipesCardProps> = ({
   className,
   socialData,
   isActive,
-  tag
+  tag,
+  footerClass,
+  headClass
 }) => {
   const Tag: typeof tag = tag || 'div'
   return (
@@ -45,13 +49,18 @@ const RecipesCard: FC<IRecipesCardProps> = ({
         theme='clear'
         className={classes.backBtn}
         onClick={() => {
-          setActiveId(-1)
+          setActiveId(null)
         }}
       >
         <img src='images/arrow.svg' alt='back' />
       </Button>
-      <Head className={classNames(classes.head)} author={author} description={description} />
-      <Footer date={date} socialData={socialData} recipesGroup={recipesGroup} className={classNames(classes.footer)} />
+      <Head className={classNames(classes.head, {}, [headClass])} author={author} description={description} />
+      <Footer
+        date={date}
+        socialData={socialData}
+        recipesGroup={recipesGroup}
+        className={classNames(classes.footer, {}, [footerClass])}
+      />
     </Tag>
   )
 }

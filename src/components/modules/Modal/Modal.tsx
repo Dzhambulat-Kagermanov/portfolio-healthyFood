@@ -8,6 +8,7 @@ import { toggleModal } from 'app/providers/store/modal/modalSlice'
 import Button from 'shared/ui/Button/Button'
 import classes from './Modal.module.scss'
 import Form from './Form/Form'
+import adaptive from './Adaptive.module.scss'
 
 interface IBurgerMenuProps extends IClassName {}
 
@@ -23,7 +24,7 @@ const Modal: FC<IBurgerMenuProps> = ({ className }) => {
           [classes.activeModal]: modalSelector,
           [classes.completeModal]: completeStateSelector
         })}
-        innerClass={classNames(classes.modal, {}, [className])}
+        innerClass={classNames(classes.modal, {}, [className, adaptive.modal])}
       >
         <Button
           circle
@@ -35,8 +36,10 @@ const Modal: FC<IBurgerMenuProps> = ({ className }) => {
         >
           <img src='images/close.svg' alt='close' />
         </Button>
-        <h2 className={classNames(classes.title)}>Order Form</h2>
-        <Form />
+        <div className={classNames(classes.contentWrapper)}>
+          <h2 className={classNames(classes.title)}>Order Form</h2>
+          <Form />
+        </div>
       </Base>
     </section>
   )

@@ -2,15 +2,17 @@
   display: flex;
   flex-flow: column wrap;
   row-gap: 10px;
+  color: var(--grey-light-transparent);
 }
 .title {
   line-height: 30px;
   letter-spacing: 0.7px;
   font-size: 20px;
   font-family: HelveticaR;
-  color: var(--white);
+  color: inherit;
 }
 .author {
   font-family: HelveticaR;
-  color: var(--grey-light-transparent);
+  font-size: var(--fsize-main);
+  color: inherit;
 }

@@ -14,14 +14,14 @@
     width: 20px;
   }
   h2 {
-    font-size: 18px;
+    font-size: var(--fsize-third);
     font-family: inherit;
     margin: 20px 0 5px 0;
     color: var(--white);
   }
   h3 {
     font-family: inherit;
-    font-size: 16px;
+    font-size: var(--fsize-second);
     color: #ffffff80;
   }
 }

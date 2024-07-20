@@ -6,6 +6,7 @@ import Base from 'shared/ui/Base/Base'
 import ChefsCard from 'components/widgets/ChefsCard/ChefsCard'
 import { chefsData } from 'shared/constants/chefs'
 import DoubleTitle from 'shared/ui/DoubleTitle/DoubleTitle'
+import adaptive from './Adaptive.module.scss'
 
 interface IChefsProps extends IClassName {
   id?: string
@@ -17,14 +18,16 @@ const Chefs: FC<IChefsProps> = ({ className, id }) => {
         <DoubleTitle backTitleSize='big' backTitle='Chefs' className={classNames(classes.title)}>
           This month's chefs
         </DoubleTitle>
-        <ul className={classNames(classes.group)}>
+        <ul className={classNames(classes.group, {}, [adaptive.group])}>
           {chefsData.map(({ avatar, id, name, portfolio, speciality }) => (
             <ChefsCard
+              footerClass={classNames(adaptive.itemFooter)}
               key={id}
               avatar={avatar}
               name={name}
               portfolio={portfolio}
               speciality={speciality}
+              headClass={classNames(adaptive.itemHead)}
               className={classNames(classes.item)}
               tag='li'
             />

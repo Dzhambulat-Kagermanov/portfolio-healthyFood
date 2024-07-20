@@ -7,6 +7,9 @@ import Logo from 'components/widgets/Logo/Logo'
 import BurgerButton from 'shared/ui/BurgerButton/BurgerButton'
 import { useAppDispatch } from 'shared/hooks/reduxHooks'
 import { toggleBurgerMenu } from 'app/providers/store/burgerMenu/burgerMenuSlice'
+import { SCREEN_WIDTH } from 'shared/constants/global'
+import Navbar from 'components/widgets/Navbar/Navbar'
+import adaptive from './Adaptive.module.scss'
 
 interface IHeaderProps extends IClassName {}
 
@@ -14,13 +17,20 @@ const Header: FC<IHeaderProps> = ({ className }) => {
   const dispatch = useAppDispatch()
   return (
     <header>
-      <Base containerClass={classNames(classes.container)} innerClass={classNames(classes.header, {}, [className])}>
+      <Base
+        containerClass={classNames(classes.container)}
+        innerClass={classNames(classes.header, {}, [className, adaptive.header])}
+      >
         <Logo />
-        <BurgerButton
-          onClick={() => {
-            dispatch({ type: toggleBurgerMenu.type, payload: {} })
-          }}
-        />
+        {SCREEN_WIDTH >= 901 ? (
+          <Navbar className={classNames(adaptive.navbar)} linkClass={classNames(adaptive.navbarItem)} />
+        ) : (
+          <BurgerButton
+            onClick={() => {
+              dispatch({ type: toggleBurgerMenu.type, payload: {} })
+            }}
+          />
+        )}
       </Base>
     </header>
   )

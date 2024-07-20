@@ -1,0 +1,94 @@
+@media screen and (min-width: 421px) {
+  .itemContent {
+    h4 {
+      font-size: 14px;
+    }
+    h3 {
+      line-height: 25px;
+    }
+  }
+}
+@media screen and (min-width: 481px) {
+}
+@media screen and (min-width: 601px) {
+  .group {
+    justify-content: space-between;
+    flex-flow: wrap row;
+    gap: 20px;
+  }
+  .item {
+    border-radius: 10px;
+    flex-grow: 1;
+    flex-basis: calc(50% - 30px);
+  }
+  .itemFooter {
+    button {
+      flex-basis: clamp(100px, 100%, 200px);
+    }
+  }
+}
+@media screen and (min-width: 769px) {
+  .itemFooter {
+    button {
+      flex-basis: clamp(100px, 100%, 270px);
+    }
+  }
+}
+@media screen and (min-width: 901px) {
+  .item {
+    flex-basis: calc(100% / 3 - 30px);
+    button {
+      flex-basis: 100%;
+    }
+    &:last-child:nth-child(3n + 1) {
+      button {
+        flex-basis: 300px;
+      }
+    }
+    &:nth-last-child(2):nth-child(3n + 1) + * {
+      button {
+        flex-basis: 140px;
+      }
+    }
+    &:nth-last-child(2):nth-child(3n + 1) {
+      button {
+        flex-basis: 140px;
+      }
+    }
+  }
+}
+@media screen and (min-width: 1025px) {
+  .item {
+    &:last-child:nth-child(n + 4) {
+      max-width: calc(100% / 3 * 2);
+    }
+  }
+}
+@media screen and (min-width: 1281px) {
+  .item {
+    &:nth-last-child(2):nth-child(3n + 1) + * {
+      button {
+        flex-basis: 260px;
+      }
+    }
+    &:nth-last-child(2):nth-child(3n + 1) {
+      button {
+        flex-basis: 260px;
+      }
+    }
+  }
+}
+@media screen and (min-width: 1441px) {
+  .item {
+    button:not(.itemHead button) {
+      height: 50px;
+      flex-basis: 180px;
+    }
+
+    &:last-child:nth-child(n + 4) {
+      max-width: 50%;
+    }
+  }
+}
+@media screen and (min-width: 1537px) {
+}

@@ -1,7 +1,7 @@
 .inputWrapper {
   font-family: HelveticaR;
   color: var(--white);
-  font-size: 18px;
+  font-size: var(--fsize-third);
 }
 .input {
   width: 100%;
@@ -33,6 +33,6 @@
   margin: 5px 0 0 0;
   text-transform: capitalize;
   font-family: inherit;
-  font-size: 16px;
+  font-size: var(--fsize-second);
   line-height: 25px;
 }

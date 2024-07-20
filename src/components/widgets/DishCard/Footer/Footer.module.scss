@@ -1,8 +1,11 @@
 .footer {
+  display: flex;
+  flex-flow: wrap;
+  justify-content: space-between;
+  row-gap: 20px;
 }
 .rating {
 }
 .btn {
-  margin: 20px 0 0 0;
   width: 100%;
 }

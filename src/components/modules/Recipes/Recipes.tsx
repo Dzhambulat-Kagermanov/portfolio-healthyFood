@@ -6,12 +6,14 @@ import { classNames } from 'shared/lib/classNames/classNames'
 import DoubleTitle from 'shared/ui/DoubleTitle/DoubleTitle'
 import RecipesCard from 'components/widgets/RecipesCard/RecipesCard'
 import { recipesData } from 'shared/constants/recipes'
+import adaptive from './Adaptive.module.scss'
 
 interface IRecipesProps extends IClassName {
   id?: string
 }
 const Recipes: FC<IRecipesProps> = ({ className, id }) => {
-  const [activeId, setActivaId] = useState<number>(0)
+  const [activeId, setActivaId] = useState<number>(null)
+  let noActiveCounter: number = 0
 
   return (
     <section>
@@ -19,24 +21,35 @@ const Recipes: FC<IRecipesProps> = ({ className, id }) => {
         <DoubleTitle backTitle='Recipes' className={classNames(classes.title)} backTitleSize='small'>
           Recipes From Our Chefs
         </DoubleTitle>
-        <ul className={classNames(classes.group)}>
-          {recipesData.map(({ author, date, description, id, recipesGroup, socialData }, index) => (
-            <RecipesCard
-              key={id}
-              author={author}
-              date={date}
-              description={description}
-              recipesGroup={recipesGroup}
-              socialData={{
-                comments: socialData.comments,
-                views: socialData.views
-              }}
-              setActiveId={setActivaId}
-              id={id}
-              className={classNames(classes.item)}
-              isActive={activeId === id}
-            />
-          ))}
+        <ul className={classNames(classes.group, {}, [adaptive.group])}>
+          {recipesData.map(({ author, date, description, id, recipesGroup, socialData }) => {
+            activeId !== id && noActiveCounter++
+            const noActiveClass: string = activeId ? `slim${noActiveCounter}` : ''
+
+            return (
+              <RecipesCard
+                tag='li'
+                key={id}
+                author={author}
+                date={date}
+                description={description}
+                recipesGroup={recipesGroup}
+                socialData={{
+                  comments: socialData.comments,
+                  views: socialData.views
+                }}
+                setActiveId={setActivaId}
+                id={id}
+                className={classNames(classes.item, {
+                  [adaptive.itemActive]: activeId === id,
+                  [adaptive[noActiveClass]]: activeId !== id && noActiveCounter <= 3
+                })}
+                isActive={activeId === id}
+                headClass={classNames(adaptive.itemHead)}
+                footerClass={classNames(adaptive.itemFooter)}
+              />
+            )
+          })}
         </ul>
       </Base>
     </section>
