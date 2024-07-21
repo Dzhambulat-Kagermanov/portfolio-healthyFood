@@ -10,12 +10,12 @@ import Button from 'shared/ui/Button/Button'
 import Loader from 'shared/ui/Loader/Loader'
 import { setDataPagination, setDataPaginationOnClick } from 'shared/lib/setDataPagination/setDataPagination'
 import adaptive from './Adaptive.module.scss'
-import { SCREEN_WIDTH } from 'shared/constants/global'
 
 interface IDishesProps extends IClassName {
   id?: string
 }
 const Dishes: FC<IDishesProps> = ({ className, id }) => {
+  let SCREEN_WIDTH = window.innerWidth
   let dishesPaginationStep: number
 
   if (SCREEN_WIDTH >= 901) {
@@ -25,6 +25,7 @@ const Dishes: FC<IDishesProps> = ({ className, id }) => {
   } else {
     dishesPaginationStep = 2
   }
+  console.log(dishesPaginationStep)
 
   const {
     paginationStep,

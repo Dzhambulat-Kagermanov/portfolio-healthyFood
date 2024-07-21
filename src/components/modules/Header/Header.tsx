@@ -7,14 +7,16 @@ import Logo from 'components/widgets/Logo/Logo'
 import BurgerButton from 'shared/ui/BurgerButton/BurgerButton'
 import { useAppDispatch } from 'shared/hooks/reduxHooks'
 import { toggleBurgerMenu } from 'app/providers/store/burgerMenu/burgerMenuSlice'
-import { SCREEN_WIDTH } from 'shared/constants/global'
 import Navbar from 'components/widgets/Navbar/Navbar'
 import adaptive from './Adaptive.module.scss'
+import useScreen from 'shared/hooks/useScreen'
 
 interface IHeaderProps extends IClassName {}
 
 const Header: FC<IHeaderProps> = ({ className }) => {
   const dispatch = useAppDispatch()
+  let SCREEN_WIDTH = useScreen()
+
   return (
     <header>
       <Base
