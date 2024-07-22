@@ -68,7 +68,7 @@ export const dishesData: IDishesData[] = [
     subtitle: 'Served with french fries + drink',
     description:
       'Choice of: Coke, Fanta, Sprite, Upgrade to large fries, Add whopper patty, Add Tender crisp patty and more...',
-    image: 'images/dishes/item-1.png',
+    image: 'images/dishes/item-7.png',
     rating: 4.7
   },
   {
@@ -77,7 +77,7 @@ export const dishesData: IDishesData[] = [
     subtitle: 'Served with french fries + drink',
     description:
       'Choice of: Coke, Fanta, Sprite, Upgrade to large fries, Add whopper patty, Add Tender crisp patty and more...',
-    image: 'images/dishes/item-2.png',
+    image: 'images/dishes/item-8.png',
     rating: 3.5
   },
   {
@@ -86,7 +86,7 @@ export const dishesData: IDishesData[] = [
     subtitle: 'Served with french fries + drink',
     description:
       'Choice of: Coke, Fanta, Sprite, Upgrade to large fries, Add whopper patty, Add Tender crisp patty and more...',
-    image: 'images/dishes/item-3.png',
+    image: 'images/dishes/item-9.png',
     rating: 5
   },
   {
@@ -95,7 +95,7 @@ export const dishesData: IDishesData[] = [
     subtitle: 'Served with french fries + drink',
     description:
       'Choice of: Coke, Fanta, Sprite, Upgrade to large fries, Add whopper patty, Add Tender crisp patty and more...',
-    image: 'images/dishes/item-4.png',
+    image: 'images/dishes/item-10.png',
     rating: 2.3
   },
   {
@@ -104,7 +104,7 @@ export const dishesData: IDishesData[] = [
     subtitle: 'Served with french fries + drink',
     description:
       'Choice of: Coke, Fanta, Sprite, Upgrade to large fries, Add whopper patty, Add Tender crisp patty and more...',
-    image: 'images/dishes/item-5.png',
+    image: 'images/dishes/item-11.png',
     rating: 4.3
   },
   {
@@ -113,7 +113,7 @@ export const dishesData: IDishesData[] = [
     subtitle: 'Served with french fries + drink',
     description:
       'Choice of: Coke, Fanta, Sprite, Upgrade to large fries, Add whopper patty, Add Tender crisp patty and more...',
-    image: 'images/dishes/item-6.png',
+    image: 'images/dishes/item-12.png',
     rating: 4.9
   }
 ]
