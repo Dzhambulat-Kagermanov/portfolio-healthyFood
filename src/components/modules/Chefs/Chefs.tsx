@@ -7,11 +7,18 @@ import ChefsCard from 'components/widgets/ChefsCard/ChefsCard'
 import { chefsData } from 'shared/constants/chefs'
 import DoubleTitle from 'shared/ui/DoubleTitle/DoubleTitle'
 import adaptive from './Adaptive.module.scss'
+import { Animate } from './Animate'
 
 interface IChefsProps extends IClassName {
   id?: string
 }
 const Chefs: FC<IChefsProps> = ({ className, id }) => {
+  Animate({
+    chefs: classes.chefs,
+    chefsItem: classes.item,
+    chefsItemHead: adaptive.itemHead,
+    chefsItemFooter: adaptive.itemFooter
+  })
   return (
     <section>
       <Base innerClass={classNames(classes.chefs, {}, [className])} containerID={classNames(id)}>

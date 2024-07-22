@@ -2,8 +2,10 @@
   padding-top: calc(var(--header-height) + 50px);
   text-align: center;
   position: static;
+  --afterScale: 1;
   &::after {
     content: '';
+    scale: var(--afterScale);
     position: absolute;
     left: 0;
     top: 0;
@@ -37,4 +39,7 @@
   margin: 0 auto 30px auto;
 }
 .info {
+}
+.infoItem {
+  scale: 1;
 }

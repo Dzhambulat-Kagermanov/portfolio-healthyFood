@@ -8,9 +8,12 @@ import Slider from 'shared/ui/Slider/Slider'
 import { aboutSlider } from 'shared/constants/about'
 import Button from 'shared/ui/Button/Button'
 import adaptive from './Adaptive.module.scss'
+import { Animate } from './Animate'
 
 interface IAboutProps extends IClassName {}
 const About: FC<IAboutProps> = ({ className }) => {
+  Animate({ about: classes.about, subtitle: classes.subtitle, slider: classes.slider })
+
   return (
     <section>
       <Base innerClass={classNames(classes.about, {}, [className])}>

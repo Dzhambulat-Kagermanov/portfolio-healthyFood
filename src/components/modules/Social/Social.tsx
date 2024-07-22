@@ -6,11 +6,14 @@ import DoubleTitle from 'shared/ui/DoubleTitle/DoubleTitle'
 import SocialCard from 'components/widgets/SocialCard/SocialCard'
 import Base from 'shared/ui/Base/Base'
 import adaptive from './Adaptive.module.scss'
+import { Animate } from './Animate'
 
 interface ISocialProps extends IClassName {
   id?: string
 }
 const Social: FC<ISocialProps> = ({ className, id }) => {
+  Animate({ social: classes.social, socialItem: classes.item })
+
   return (
     <section>
       <Base innerClass={classNames(classes.social, {}, [className])} containerID={classNames(id)}>

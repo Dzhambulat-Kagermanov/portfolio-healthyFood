@@ -18,7 +18,7 @@ import { classNames } from 'shared/lib/classNames/classNames'
 
 const App: FC = () => {
   return (
-    <div className={classNames('App', {}, [adaptive.App])}>
+    <div className={classNames('App', {}, [adaptive.App])} style={{ height: '100%' }}>
       <Header />
       <main>
         <BurgerMenu />

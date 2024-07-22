@@ -8,11 +8,19 @@ import Base from 'shared/ui/Base/Base'
 import useModal from 'shared/hooks/useModal'
 import { toggleModal } from 'app/providers/store/modal/modalSlice'
 import adaptive from './Adaptive.module.scss'
+import { Animate } from './Animate'
 
 interface IHeadProps extends IClassName {}
 const Head: FC<IHeadProps> = ({ className }) => {
   const modal = useModal(toggleModal.type)
 
+  Animate({
+    head: classes.head,
+    title: classes.title,
+    subtitle: classes.subtitle,
+    btn: classes.btn,
+    infoItem: classes.infoItem
+  })
   return (
     <section>
       <Base innerClass={classNames(classes.head, {}, [className, adaptive.head])}>
@@ -33,7 +41,7 @@ const Head: FC<IHeadProps> = ({ className }) => {
         >
           Order Now
         </Button>
-        <Info className={classNames(classes.info, {}, [adaptive.info])} />
+        <Info className={classNames(classes.info, {}, [adaptive.info])} itemClass={classNames(classes.infoItem)} />
       </Base>
     </section>
   )

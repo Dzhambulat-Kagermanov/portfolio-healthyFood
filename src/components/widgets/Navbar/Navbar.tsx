@@ -19,7 +19,7 @@ const Navbar: FC<INavbar> = ({ className, linkOnClick, linkClass, linkItemClass 
             Menu
           </Link>
         </li>
-        <li className={classNames(classes.item)}>
+        <li className={classNames(classes.item, {}, [linkClass])}>
           <Link
             href={'#anchor-recipes'}
             className={classNames(classes.link, {}, [linkItemClass])}
@@ -28,12 +28,12 @@ const Navbar: FC<INavbar> = ({ className, linkOnClick, linkClass, linkItemClass 
             Recipes
           </Link>
         </li>
-        <li className={classNames(classes.item)}>
+        <li className={classNames(classes.item, {}, [linkClass])}>
           <Link href={'#anchor-chefs'} className={classNames(classes.link, {}, [linkItemClass])} onClick={linkOnClick}>
             Chefs
           </Link>
         </li>
-        <li className={classNames(classes.item)}>
+        <li className={classNames(classes.item, {}, [linkClass])}>
           <Link
             href={'#anchor-contacts'}
             className={classNames(classes.link, {}, [linkItemClass])}

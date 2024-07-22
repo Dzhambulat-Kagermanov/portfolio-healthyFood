@@ -10,6 +10,7 @@ import Button from 'shared/ui/Button/Button'
 import Loader from 'shared/ui/Loader/Loader'
 import { setDataPagination, setDataPaginationOnClick } from 'shared/lib/setDataPagination/setDataPagination'
 import adaptive from './Adaptive.module.scss'
+import { Animate } from './Animate'
 
 interface IDishesProps extends IClassName {
   id?: string
@@ -25,7 +26,6 @@ const Dishes: FC<IDishesProps> = ({ className, id }) => {
   } else {
     dishesPaginationStep = 2
   }
-  console.log(dishesPaginationStep)
 
   const {
     paginationStep,
@@ -38,6 +38,8 @@ const Dishes: FC<IDishesProps> = ({ className, id }) => {
     isLoadData,
     setIsLoadData
   } = setDataPagination(dishesData, dishesPaginationStep)
+
+  Animate({ dishes: classes.dishes, dishesGroup: classes.group, dishesItem: adaptive.item, moreBtn: classes.moreBtn })
 
   return (
     <section>

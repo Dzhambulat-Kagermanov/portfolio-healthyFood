@@ -10,6 +10,7 @@ import { toggleBurgerMenu } from 'app/providers/store/burgerMenu/burgerMenuSlice
 import Navbar from 'components/widgets/Navbar/Navbar'
 import adaptive from './Adaptive.module.scss'
 import useScreen from 'shared/hooks/useScreen'
+import { Animate } from './Animate'
 
 interface IHeaderProps extends IClassName {}
 
@@ -17,15 +18,19 @@ const Header: FC<IHeaderProps> = ({ className }) => {
   const dispatch = useAppDispatch()
   let SCREEN_WIDTH = useScreen()
 
+  Animate({ container: classes.container, logo: classes.logo, navbarItem: classes.navbarItem })
   return (
     <header>
       <Base
         containerClass={classNames(classes.container)}
         innerClass={classNames(classes.header, {}, [className, adaptive.header])}
       >
-        <Logo />
+        <Logo className={classNames(classes.logo)} />
         {SCREEN_WIDTH >= 901 ? (
-          <Navbar className={classNames(adaptive.navbar)} linkClass={classNames(adaptive.navbarItem)} />
+          <Navbar
+            className={classNames(adaptive.navbar)}
+            linkClass={classNames(adaptive.navbarItem, {}, [classes.navbarItem])}
+          />
         ) : (
           <BurgerButton
             onClick={() => {

@@ -6,9 +6,12 @@ import DoubleTitle from 'shared/ui/DoubleTitle/DoubleTitle'
 import Base from 'shared/ui/Base/Base'
 import WorkCard from 'components/widgets/WorkCard/WorkCard'
 import adaptive from './Adaptive.module.scss'
+import { Animate } from './Animate'
 
 interface IWorkProps extends IClassName {}
 const Work: FC<IWorkProps> = ({ className }) => {
+  Animate({ work: classes.work, workItem: classes.item })
+
   return (
     <section>
       <Base innerClass={classNames(classes.work, {}, [className])}>

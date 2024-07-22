@@ -7,6 +7,7 @@ import DoubleTitle from 'shared/ui/DoubleTitle/DoubleTitle'
 import RecipesCard from 'components/widgets/RecipesCard/RecipesCard'
 import { recipesData } from 'shared/constants/recipes'
 import adaptive from './Adaptive.module.scss'
+import { Animate } from './Animate'
 
 interface IRecipesProps extends IClassName {
   id?: string
@@ -14,6 +15,13 @@ interface IRecipesProps extends IClassName {
 const Recipes: FC<IRecipesProps> = ({ className, id }) => {
   const [activeId, setActivaId] = useState<number>(null)
   let noActiveCounter: number = 0
+
+  Animate({
+    recipes: classes.recipes,
+    recipesGroup: classes.group,
+    recipesItem: classes.item,
+    recipesItemActive: adaptive.itemActive
+  })
 
   return (
     <section>
