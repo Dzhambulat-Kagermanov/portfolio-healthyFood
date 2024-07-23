@@ -29,7 +29,7 @@
 
 ---
 
-### Ссылка на сайт: [Нажми на меня](https://potrfolio-booking-houses.vercel.app/)
+### Ссылка на сайт: [Нажми на меня](https://portfolio-healthy-food.vercel.app/)
 
 ---
 
