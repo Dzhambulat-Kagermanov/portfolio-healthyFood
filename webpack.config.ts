@@ -6,9 +6,10 @@ import webpackConfig from './config/webpack/webpackConfig'
 export interface IConfigEnvironments {
   port?: number
   mode?: TWebpackMode
+  analyze?: boolean
 }
 
-export default ({ mode, port }: IConfigEnvironments): webpack.Configuration => {
+export default ({ mode, port, analyze }: IConfigEnvironments): webpack.Configuration => {
   const isDev: boolean = mode ? mode === 'development' : true
   const isProd: boolean = !isDev
   const paths: IWebpackPaths = {
@@ -18,5 +19,5 @@ export default ({ mode, port }: IConfigEnvironments): webpack.Configuration => {
     src: path.resolve(__dirname, 'src'),
     public: path.resolve(__dirname, 'public')
   }
-  return webpackConfig({ mode: mode || 'development', paths, isDev, isProd })
+  return webpackConfig({ mode: mode || 'development', paths, isDev, isProd, analyze, port })
 }

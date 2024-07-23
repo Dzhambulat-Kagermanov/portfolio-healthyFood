@@ -13,4 +13,5 @@ export interface IWebpackConfig {
   port?: number
   isDev?: boolean
   isProd?: boolean
+  analyze?: boolean
 }

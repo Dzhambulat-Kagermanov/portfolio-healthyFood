@@ -4,7 +4,7 @@ import HtmlWebpackPlugin from 'html-webpack-plugin'
 import MiniCssExtractPlugin from 'mini-css-extract-plugin'
 import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer'
 
-export const webpackPlugins = ({ paths, isDev, isProd }: IWebpackConfig): webpack.WebpackPluginInstance[] => {
+export const webpackPlugins = ({ paths, isProd, analyze }: IWebpackConfig): webpack.WebpackPluginInstance[] => {
   const result: any[] = [
     new HtmlWebpackPlugin({
       template: paths.html
@@ -16,9 +16,10 @@ export const webpackPlugins = ({ paths, isDev, isProd }: IWebpackConfig): webpac
         })
       : undefined,
     new webpack.ProgressPlugin(),
-    new BundleAnalyzerPlugin({
-      openAnalyzer: false
-    })
+    analyze &&
+      new BundleAnalyzerPlugin({
+        openAnalyzer: false
+      })
   ]
 
   return result
