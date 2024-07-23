@@ -44,14 +44,14 @@ export const webpackLoaders = ({ isDev, isProd }: IWebpackConfig): webpack.RuleS
     test: /\.(png|svg|jpg|jpeg|gif|ico)$/i,
     type: 'asset/resource',
     generator: {
-      filename: 'static/[hash][ext]'
+      filename: 'static/images/[name].[contenthash:10][ext]'
     }
   }
   const assetFonts = {
     test: /\.(woff|woff2|eot|ttf|otf)$/i,
     type: 'asset/resource',
     generator: {
-      filename: 'static/[hash][ext]'
+      filename: 'static/fonts/[name].[contenthash:10][ext]'
     }
   }
 
