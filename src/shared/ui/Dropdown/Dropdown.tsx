@@ -39,7 +39,7 @@ const Dropdown: FC<IDropdownProps> = ({ children, className, collapseArrow, plac
           <div className={classNames(classes.activeElemContent)}>{activeElem || placeholder || 'Choose elem'}</div>
           <img
             className={classNames(classes.collapseArrow)}
-            src={collapseArrow || 'images/triangleArrow.svg'}
+            src={collapseArrow || require('images/triangleArrow.svg')}
             alt='collapse'
           />
         </Button>

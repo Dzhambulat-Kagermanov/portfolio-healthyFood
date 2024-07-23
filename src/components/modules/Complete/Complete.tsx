@@ -28,7 +28,7 @@ const Complete: FC<ICompleteProps> = ({ children, className, clear }) => {
           dispatch({ type: toggleComplete.type })
         }}
       >
-        <img src='images/close.svg' alt='close' />
+        <img src={require('images/close.svg')} alt='close' />
       </Button>
       {!clear && <Head className={classNames(classes.head)}>{completeTitleSelector}</Head>}
       {children}

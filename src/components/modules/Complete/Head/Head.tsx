@@ -8,7 +8,7 @@ const Head: FC<IHeadProps> = ({ children, className }) => {
   return (
     <div className={classNames(classes.head, {}, [className])}>
       <div className={classNames(classes.img)}>
-        <img src='images/checkmark.svg' alt='checkmark' />
+        <img src={require('images/checkmark.svg')} alt='checkmark' />
       </div>
       <h2 className={classNames(classes.title)}>{children}</h2>
     </div>

@@ -34,7 +34,7 @@ const Modal: FC<IBurgerMenuProps> = ({ className }) => {
             modal()
           }}
         >
-          <img src='images/close.svg' alt='close' />
+          <img src={require('images/close.svg')} alt='close' />
         </Button>
         <div className={classNames(classes.contentWrapper)}>
           <h2 className={classNames(classes.title)}>Order Form</h2>
