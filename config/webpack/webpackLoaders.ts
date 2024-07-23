@@ -54,6 +54,10 @@ export const webpackLoaders = ({ isDev, isProd }: IWebpackConfig): webpack.RuleS
       filename: 'static/fonts/[name].[contenthash:10][ext]'
     }
   }
+  const htmlLoader = {
+    test: /\.html$/,
+    loader: 'html-loader'
+  }
 
-  return [babelLoader, tsLoader, assetImages, assetFonts, cssLoader, sassLoader]
+  return [babelLoader, tsLoader, assetImages, assetFonts, cssLoader, sassLoader, htmlLoader]
 }

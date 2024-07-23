@@ -43,13 +43,13 @@ const About: FC<IAboutProps> = ({ className }) => {
           itemClass={classNames(classes.sliderItem, {}, [adaptive.sliderItem])}
           btnPrev={
             <Button circle theme='outlined' className={classNames(classes.sliderBtn, {}, [classes.sliderBtnPrev])}>
-              <img src='images/arrow.svg' alt='arrow' />
+              <img src={require('images/arrow.svg')} alt='arrow' />
             </Button>
           }
           btnPrevID={classes.sliderBtnPrev}
           btnNext={
             <Button circle theme='outlined' className={classNames(classes.sliderBtn, {}, [classes.sliderBtnNext])}>
-              <img src='images/arrow.svg' alt='arrow' />
+              <img src={require('images/arrow.svg')} alt='arrow' />
             </Button>
           }
           btnNextID={classes.sliderBtnNext}

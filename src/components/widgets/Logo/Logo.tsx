@@ -8,7 +8,7 @@ interface ILogoProps extends IClassName {}
 const Logo: FC<ILogoProps> = ({ className }) => {
   return (
     <div className={classNames(classes.logo, {}, [className])}>
-      <img src='images/logo.svg' alt='logotype' />
+      <img src={require('images/logo.svg')} alt='logotype' />
       <h2 className={classNames(classes.text)}>Healthy food</h2>
     </div>
   )

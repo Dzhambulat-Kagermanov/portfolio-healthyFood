@@ -12,11 +12,11 @@ const Footer: FC<IFooterProps> = ({ date, socialData, recipesGroup, className })
       <h3>{date}</h3>
       <ul className={classes.social}>
         <li className={classes.socialItem}>
-          <img src='images/views.svg' alt='views' />
+          <img src={require('images/views.svg')} alt='views' />
           <h2>{socialData.views}</h2>
         </li>
         <li className={classes.socialItem}>
-          <img src='images/comments.svg' alt='comments' />
+          <img src={require('images/comments.svg')} alt='comments' />
           <h2>{socialData.comments}</h2>
         </li>
       </ul>

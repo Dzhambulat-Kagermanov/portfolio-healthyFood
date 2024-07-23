@@ -23,7 +23,7 @@ const Social: FC<ISocialProps> = ({ className, id }) => {
         <ul className={classNames(classes.group, {}, [adaptive.group])}>
           <SocialCard
             tag='li'
-            socialImg='images/Social/twitter.svg'
+            socialImg={require('images/Social/twitter.svg')}
             socialName='Twitter'
             className={classNames(classes.item, {}, [classes.twitter, adaptive.item])}
             contentClass={classNames(classes.content, {}, [adaptive.itemContent])}
@@ -38,7 +38,7 @@ const Social: FC<ISocialProps> = ({ className, id }) => {
           </SocialCard>
           <SocialCard
             tag='li'
-            socialImg='images/Social/instagram.svg'
+            socialImg={require('images/Social/instagram.svg')}
             socialName='Instagram'
             className={classNames(classes.item, {}, [classes.instagram, adaptive.item])}
             contentClass={classNames(classes.content, {}, [adaptive.itemContent])}
@@ -46,27 +46,27 @@ const Social: FC<ISocialProps> = ({ className, id }) => {
             contentTag='ul'
           >
             <li className={classNames(classes.contentItem, {}, [adaptive.contentItem])}>
-              <img src='images/Social/instagram-item-1.png' alt='instagram image' />
+              <img src={require('images/Social/instagram-item-1.png')} alt='instagram image' />
             </li>
             <li className={classNames(classes.contentItem, {}, [adaptive.contentItem])}>
-              <img src='images/Social/instagram-item-2.png' alt='instagram image' />
+              <img src={require('images/Social/instagram-item-2.png')} alt='instagram image' />
             </li>
             <li className={classNames(classes.contentItem, {}, [adaptive.contentItem])}>
-              <img src='images/Social/instagram-item-3.png' alt='instagram image' />
+              <img src={require('images/Social/instagram-item-3.png')} alt='instagram image' />
             </li>
             <li className={classNames(classes.contentItem, {}, [adaptive.contentItem])}>
-              <img src='images/Social/instagram-item-4.png' alt='instagram image' />
+              <img src={require('images/Social/instagram-item-4.png')} alt='instagram image' />
             </li>
             <li className={classNames(classes.contentItem, {}, [adaptive.contentItem])}>
-              <img src='images/Social/instagram-item-5.png' alt='instagram image' />
+              <img src={require('images/Social/instagram-item-5.png')} alt='instagram image' />
             </li>
             <li className={classNames(classes.contentItem, {}, [adaptive.contentItem])}>
-              <img src='images/Social/instagram-item-6.png' alt='instagram image' />
+              <img src={require('images/Social/instagram-item-6.png')} alt='instagram image' />
             </li>
           </SocialCard>
           <SocialCard
             tag='li'
-            socialImg='images/Social/facebook.svg'
+            socialImg={require('images/Social/facebook.svg')}
             socialName='Facebook'
             className={classNames(classes.item, {}, [classes.facebook, adaptive.item])}
             contentClass={classNames(classes.content, {}, [adaptive.itemContent])}

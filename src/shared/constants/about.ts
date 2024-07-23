@@ -6,18 +6,18 @@ export interface IAboutSlider {
 export const aboutSlider: IAboutSlider[] = [
   {
     id: 1,
-    img: 'images/about/item-1.png'
+    img: require('images/About/item-1.png')
   },
   {
     id: 2,
-    img: 'images/about/item-2.png'
+    img: require('images/About/item-2.png')
   },
   {
     id: 3,
-    img: 'images/about/item-3.png'
+    img: require('images/About/item-3.png')
   },
   {
     id: 4,
-    img: 'images/about/item-4.png'
+    img: require('images/About/item-4.png')
   }
 ]

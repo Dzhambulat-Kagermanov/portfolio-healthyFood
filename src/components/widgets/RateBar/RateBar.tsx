@@ -8,9 +8,9 @@ interface IRateBarProps extends IClassName {
   rating: number
 }
 const RateBar: FC<IRateBarProps> = ({ className, rating }) => {
-  const fullStar: string = 'images/stars/fullStar.svg'
-  const halfStar: string = 'images/stars/halfStar.svg'
-  const emptyStar: string = 'images/stars/emptyStar.svg'
+  const fullStar: string = require('images/stars/fullStar.svg')
+  const halfStar: string = require('images/stars/halfStar.svg')
+  const emptyStar: string = require('images/stars/emptyStar.svg')
   const { expandedRating, ratingPositions }: IRatingPositions = starsPositions(rating)
 
   return (

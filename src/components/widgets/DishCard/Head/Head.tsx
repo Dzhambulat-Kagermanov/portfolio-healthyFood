@@ -12,7 +12,7 @@ const Head: FC<IHeadProps> = ({ className, image }) => {
     <div className={classNames(classes.head, {}, [className])}>
       <img src={image} alt='dish image' />
       <Button className={classNames(classes.shareBtn)} circle theme='clear'>
-        <img src='images/share.svg' alt='share' />
+        <img src={require('images/share.svg')} alt='share' />
       </Button>
     </div>
   )
