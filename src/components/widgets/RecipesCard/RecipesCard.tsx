@@ -52,7 +52,7 @@ const RecipesCard: FC<IRecipesCardProps> = ({
           setActiveId(null)
         }}
       >
-        <img src='images/arrow.svg' alt='back' />
+        <img src={require('images/arrow.svg')} alt='back' />
       </Button>
       <Head className={classNames(classes.head, {}, [headClass])} author={author} description={description} />
       <Footer
