@@ -1,5 +1,4 @@
 import { FC } from 'react'
-import classes from './Dishes.module.scss'
 import { IClassName } from 'shared/types/shared'
 import DoubleTitle from 'shared/ui/DoubleTitle/DoubleTitle'
 import { classNames } from 'shared/lib/classNames/classNames'
@@ -9,6 +8,7 @@ import { dishesData } from 'shared/constants/dishes'
 import Button from 'shared/ui/Button/Button'
 import Loader from 'shared/ui/Loader/Loader'
 import { setDataPagination, setDataPaginationOnClick } from 'shared/lib/setDataPagination/setDataPagination'
+import classes from './Dishes.module.scss'
 import adaptive from './Adaptive.module.scss'
 import { Animate } from './Animate'
 
@@ -43,7 +43,8 @@ const Dishes: FC<IDishesProps> = ({ className, id }) => {
 
   return (
     <section>
-      <Base innerClass={classNames(classes.dishes, {}, [className])} containerID={classNames(id)}>
+      <Base innerClass={classNames(classes.dishes, {}, [className])} containerID={classNames(id)}
+      containerClass={classNames(classes.container)}>
         <DoubleTitle className={classNames(classes.title)} backTitleSize='medium' backTitle='Dishes'>
           Dish Of The Day
         </DoubleTitle>

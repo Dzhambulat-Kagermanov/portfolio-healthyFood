@@ -1,10 +1,10 @@
 import { FC } from 'react'
-import classes from './Social.module.scss'
 import { IClassName } from 'shared/types/shared'
 import { classNames } from 'shared/lib/classNames/classNames'
 import DoubleTitle from 'shared/ui/DoubleTitle/DoubleTitle'
 import SocialCard from 'components/widgets/SocialCard/SocialCard'
 import Base from 'shared/ui/Base/Base'
+import classes from './Social.module.scss'
 import adaptive from './Adaptive.module.scss'
 import { Animate } from './Animate'
 
@@ -16,7 +16,7 @@ const Social: FC<ISocialProps> = ({ className, id }) => {
 
   return (
     <section>
-      <Base innerClass={classNames(classes.social, {}, [className])} containerID={classNames(id)}>
+      <Base innerClass={classNames(classes.social, {}, [className])} containerID={classNames(id)} containerClass={classNames(classes.container)}>
         <DoubleTitle backTitleSize='medium' backTitle='Social' className={classNames(classes.title)}>
           We in Social
         </DoubleTitle>

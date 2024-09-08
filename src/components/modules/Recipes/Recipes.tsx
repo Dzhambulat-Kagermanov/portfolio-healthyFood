@@ -25,7 +25,7 @@ const Recipes: FC<IRecipesProps> = ({ className, id }) => {
 
   return (
     <section>
-      <Base innerClass={classNames(classes.recipes, {}, [className])} containerID={classNames(id)}>
+      <Base innerClass={classNames(classes.recipes, {}, [className])} containerID={classNames(id)} containerClass={classNames(classes.container)}>
         <DoubleTitle backTitle='Recipes' className={classNames(classes.title)} backTitleSize='small'>
           Recipes From Our Chefs
         </DoubleTitle>
